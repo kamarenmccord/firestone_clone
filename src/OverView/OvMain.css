@@ -1,0 +1,150 @@
+
+.ovmain__header{
+    /* border: 2px dashed red; */
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-image: url('https://www.firestone.com/content/dam/fst/firestone/firestone_hero_web.jpg');
+    background-size: cover;
+    height: 455px;
+}
+
+.ovmain button {
+    cursor: pointer;
+    color: white;
+    width: 98%;
+    background-color: #d60503;
+    height: 90px;
+    border:none;
+    padding: 10px;
+}
+
+.ovmain button:hover{
+    background-color: #a10300;
+}
+
+span.ovmain__uppertext{
+    font-size: 12px;
+}
+
+span.ovmain__lowertext{
+    font-size: 24px;
+}
+
+.ovmain__headtext{
+    margin-top: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.ovmain__upperbutton{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.ovmain__upperbutton .ovmain__lowertext{
+    text-align: end;
+}
+
+.ovmain__lowerbutton{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.ovmain__uppertext{
+    font-size: 16px;
+}
+
+.ovmain__lowertext{
+    font-size: 18px;
+    font-weight: bolder;
+    max-width: 200px;
+    text-align: left;
+}
+
+.ovmain__companyinfo{
+    display:flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.ovmain__companyinfo h3{
+    font-size: 18px;
+    display:flex;
+    align-items:center;
+    height: 50px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: #d70000;
+    color:white;
+    margin: 0;
+    border-bottom: 2px solid #5c0000;
+}
+
+.ovmain__autocare {
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 0;
+    color: white;
+    background-color: #760000;
+    border-bottom: 2px solid #5c0000;
+}
+
+.ovmain__autocare h2{
+    margin-bottom: 13px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ovmain__autocare ul {
+    list-style-type: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+
+.ovmain__autocare ul li{
+    cursor: pointer;
+    font-size: 11px;
+    margin-bottom: 13px;
+}
+
+.ovmain__manufacturing{
+    padding: 20px;
+    background-color: #760000;
+    color: white;
+}
+
+.ovmain__manufacturing h2 {
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+
+.ovmain__manufacturing ul {
+    list-style-type: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+
+.ovmain__manufacturing ul li{
+    cursor: pointer;
+    font-size: 11px;
+    margin-bottom: 13px;
+}
+
+.ovmain ul {
+    display:none;
+}

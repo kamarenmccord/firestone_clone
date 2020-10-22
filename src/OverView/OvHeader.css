@@ -1,0 +1,26 @@
+.ovheader{
+    /* border: 1px dashed red; */
+    padding: 20px 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 50px;
+    margin-bottom: -30px;
+}
+
+.ovheader__logo img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.ovheader h2{
+    display:none;
+}
+
+.ovheader h3{
+    display:none;
+    font-size: 10px;
+    cursor: pointer;
+}
