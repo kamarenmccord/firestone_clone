@@ -1,10 +1,10 @@
 import React from 'react'
-import './Logo.css'
+import './FirestoneLogo.css'
 
 function FirestoneLogo() {
     return (
-        <div>
-            
+        <div className='firestonelogo'>
+            <h3>Firestone</h3>
         </div>
     )
 }

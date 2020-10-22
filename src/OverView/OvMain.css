@@ -90,6 +90,10 @@ span.ovmain__lowertext{
     border-bottom: 2px solid #5c0000;
 }
 
+.ovmain__companyinfo h2{
+    cursor: pointer;
+}
+
 .ovmain__autocare {
     padding: 15px;
     display:flex;

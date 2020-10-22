@@ -1,0 +1,34 @@
+
+.ovfooter{
+    min-height: 120px;
+    display:flex;
+    flex-direction: column;
+    color: white;
+    background-color: #202020;
+}
+
+.ovfooter__nav{
+    width: 83%;
+    margin: auto;
+    margin-top: 0;
+    padding: 20px;
+    display:flex;
+    justify-content: center;
+    border-top: 1px solid #595959;
+}
+.ovfooter__nav .nav{
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    border-right: 1px solid #595959;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.copywrite{
+    padding: 20px;
+    font-size: 10px;
+}

@@ -1,0 +1,15 @@
+
+.firestonelogo{
+    color: white;
+    background-color: #710606;
+    height: 40px;
+    display:flex;
+    align-items:center;
+    justify-content: flex-start;
+}
+
+.firestonelogo h3{
+    font-size: 1em;
+    padding-left: 20px;
+
+}
