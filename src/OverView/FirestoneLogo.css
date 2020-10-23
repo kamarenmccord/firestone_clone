@@ -11,5 +11,36 @@
 .firestonelogo h3{
     font-size: 1em;
     padding-left: 20px;
+}
+
+.firestonelogo p{
+    display:none;
+}
+
+@media (min-width: 425px){
+    .firestonelogo{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 80px;
+        height: 100px;
+        background-image: linear-gradient(to top, #440101, #8f0000)
+    }
+
+    .firestonelogo h3{
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .firestonelogo p{
+        display:inline;
+        color: #645454;
+        font-size: 11px;
+    }
+
+    .firestonelogo__chained{
+        margin-left:100px;
+    }
+
 
 }

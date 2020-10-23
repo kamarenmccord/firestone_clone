@@ -2,12 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import OverViewHome from './OverView/OverViewHome';
+import FirestoneTires from './ft/FirestoneTires';
+import FirestoneComplete from './fcac/FirestoneComplete';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
+          <Route path='/firestonetires'>
+            <FirestoneTires />
+          </Route>
+          <Route path='/firestonecomplete'>
+            <FirestoneComplete />
+          </Route>
           <Route path='/'>
             <OverViewHome />
           </Route>

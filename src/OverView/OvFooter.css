@@ -1,4 +1,9 @@
 
+
+.ovfooter--large{
+    display:none;
+}
+
 .ovfooter{
     min-height: 120px;
     display:flex;
@@ -31,4 +36,58 @@
 .copywrite{
     padding: 20px;
     font-size: 10px;
+}
+
+@media (min-width: 425px){
+    .ovfooter--small{
+        display: none;
+    }
+
+    .ovfooter--large{
+        display:inline;
+        min-height: 0;
+        background-image: linear-gradient(to bottom, #4e0a0a, #6f0606);
+        height: 75px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .ovfooter__nav{
+        min-height: 0;
+        border-top: none;
+        padding: 0;
+        display:flex;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content: center;
+        width: 70%;
+        margin-right: 10%;
+    }
+
+    .ovfooter__nav ul{
+        flex-basis: 65%;
+        list-style-type: none;
+        margin:0;
+        padding: 0;
+    }
+
+    .ovfooter .liend{
+        border-right:none;
+    }
+
+    .ovfooter__nav ul li{
+        display: inline-block;
+        padding: 0 15px;
+        border-right: 1px solid #595959;
+        color: #595959;
+        font-size: 11px;
+    }
+
+    .ovfooter__nav ul li:hover{
+        color: red;
+        cursor: pointer;
+    }
+
 }

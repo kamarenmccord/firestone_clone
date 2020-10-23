@@ -10,7 +10,11 @@
     height: 455px;
 }
 
-.ovmain button {
+.ovmain__header p{
+    display:none;
+}
+
+.ovmain .button {
     cursor: pointer;
     color: white;
     width: 98%;
@@ -20,7 +24,7 @@
     padding: 10px;
 }
 
-.ovmain button:hover{
+.ovmain .button:hover{
     background-color: #a10300;
 }
 
@@ -67,7 +71,6 @@ span.ovmain__lowertext{
 .ovmain__lowertext{
     font-size: 18px;
     font-weight: bolder;
-    max-width: 200px;
     text-align: left;
 }
 
@@ -151,4 +154,125 @@ span.ovmain__lowertext{
 
 .ovmain ul {
     display:none;
+}
+
+@media ( min-width: 425px){
+    /* when small (less than px) */
+    .ovmain__header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        height: 600px;
+    }
+
+    .ovmain__header p{
+        margin-top:-10px;
+        display:inline;
+    }
+    .ovmain__header .p1{
+        align-self: flex-start;
+    }
+
+    .ovmain__header .p2{
+        align-self: flex-end;
+    }
+
+    .ovmain__header .button{
+        flex-basis: 45%;
+        margin: 10px;
+        padding: 10px;
+        height: 115px;
+    }
+
+    .ovmain__headtext{
+        display:flex;
+        justify-content: space-around;
+        text-align:center;
+        margin-top: 100px;
+        margin-bottom: -100px;
+        flex-basis: 100%;
+
+    }
+
+    .ovmain__headtext span{
+        font-size: 36px;
+        font-weight: 350;
+    }
+
+    .ovmain__headtext .ovmain__lowertext{
+        font-size: 76px;
+        font-weight: bolder;
+        margin-bottom: -100px;
+    }
+
+    .ovmain__uppertext{
+        font-size: 24px;
+        font-weight: 250;
+    }
+
+    .ovmain__lowertext{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .ovmain__companyinfo h3{
+        display:none;
+    }
+
+    .ovmain__companyinfo {
+        display:flex;
+        flex-direction: row;
+        margin-top: 75px;
+    }
+
+    .ovmain__autocare {
+        width: 40%;
+        margin-right: 20px;
+        border-bottom: none;
+        border-top: 1px solid #363636;
+        background-color: transparent;
+        color:#d5180f;
+        margin-left: 50px;
+    }
+    .ovmain__autocare ul{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: start;
+        color: #5d5d5f;
+        text-decoration: none;
+    }
+
+    .ovmain__autocare ul li{
+        margin-top: 20px;
+        flex-basis: 50%;
+    }
+
+    .ovmain__manufacturing {
+        width: 40%;
+        margin-right: 20px;
+        border-bottom: none;
+        border-top: 1px solid #363636;
+        background-color: transparent;
+        color:#d5180f;
+        margin-left: 10px;
+    }
+    .ovmain__manufacturing ul{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: start;
+        color: #5d5d5f;
+        text-decoration: none;
+    }
+
+    .ovmain__manufacturing ul li{
+        margin-top: 20px;
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 768 ){
+    /* larger phones/tablets */
 }

@@ -41,3 +41,10 @@
 .ovadds__heritage{
     background-image: url('https://www.firestone.com/content/dam/bridgestone/consumer/fst/Messaging/sm_Heritage.jpg');
 }
+
+@media (min-width: 425px){
+    .ovadds{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

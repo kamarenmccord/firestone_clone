@@ -1,5 +1,6 @@
 import React from 'react';
 import "./OvMain.css";
+import { Link } from 'react-router-dom';
 
 function OvMain() {
     return (
@@ -9,14 +10,16 @@ function OvMain() {
                     <span className='ovmain__uppertext'>MAKE YOUR CAR A</span>
                     <span className='ovmain__lowertext'>FIRESTONE</span>
                 </div>
-                <button className='ovmain__upperbutton'>
-                    <div className='ovmain__uppertext'>Go To</div>
-                    <div className='ovmain__lowertext'>FIRESTONE<br />TIRES</div>
-                </button>
-                <button className='ovmain__lowerbutton'>
-                    <div className='ovmain__uppertext'>Go To</div>
-                    <div className='ovmain__lowertext'>FIRESTONE COMPLETE AUTO CARE</div>
-                </button>
+                <Link to='/firestonetires' className='ovmain__upperbutton button'>
+                        <div className='ovmain__uppertext'>Go To</div>
+                        <div className='ovmain__lowertext'>FIRESTONE<br />TIRES</div>
+                        <p className='p1'>+More</p>
+                </Link>
+                <Link to='firestonecomplete' className='ovmain__lowerbutton button'>
+                        <div className='ovmain__uppertext'>Go To</div>
+                        <div className='ovmain__lowertext'>FIRESTONE COMPLETE<br />AUTO CARE</div>
+                        <p className='p2'>+More</p>
+                </Link>
             </div>
 
             <div className='ovmain__companyinfo'>
