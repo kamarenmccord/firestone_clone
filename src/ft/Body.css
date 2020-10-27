@@ -1,0 +1,9 @@
+.body{
+    color: black;
+}
+
+.body__spacer{
+    width: 100%;
+    background-color: white;
+    height: 6px;
+}

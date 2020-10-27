@@ -1,0 +1,27 @@
+
+.findastore{
+    background-color: black;
+    color:white;
+    width: 100%;
+    height: 100px;
+}
+
+.findastore__wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #aaa;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.findastore a{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}

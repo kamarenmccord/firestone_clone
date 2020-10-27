@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Header from './Header';
+import Body from './Body';
 
 function FirestoneTires() {
     return (
         <div>
-            <p>we got tires and rubber and more tires oh and patches</p>
+            <Header />
+            <Body />
         </div>
     )
 }

@@ -10,16 +10,16 @@ function OvMain() {
                     <span className='ovmain__uppertext'>MAKE YOUR CAR A</span>
                     <span className='ovmain__lowertext'>FIRESTONE</span>
                 </div>
-                <Link to='/firestonetires' className='ovmain__upperbutton button'>
+                <a href='/firestonetires' className='ovmain__upperbutton button'>
                         <div className='ovmain__uppertext'>Go To</div>
                         <div className='ovmain__lowertext'>FIRESTONE<br />TIRES</div>
                         <p className='p1'>+More</p>
-                </Link>
-                <Link to='firestonecomplete' className='ovmain__lowerbutton button'>
+                </a>
+                <a href='firestonecomplete' className='ovmain__lowerbutton button'>
                         <div className='ovmain__uppertext'>Go To</div>
                         <div className='ovmain__lowertext'>FIRESTONE COMPLETE<br />AUTO CARE</div>
                         <p className='p2'>+More</p>
-                </Link>
+                </a>
             </div>
 
             <div className='ovmain__companyinfo'>

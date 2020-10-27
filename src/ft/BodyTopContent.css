@@ -1,0 +1,43 @@
+
+.body__topcontent{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-image: url('https://www.firestonetire.com/content/dam/bridgestone/consumer/fst/promos/2020/FST_FallPromo_road.png');
+    background-size: cover;
+    background-position: center;
+    height: 340px;
+}
+
+.body__topcontent h1{
+    color:white;
+    font-size: 24px;
+}
+
+.body__topcontent *{
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.body__topcontent button{
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 150px;
+}
+
+.body__topcontent .leftbutton{
+    background-color: red;
+    margin-right: 10px;
+}
+
+.body__topcontent .rightbutton{
+    background-color: orange;
+    margin-left: 10px;
+}
