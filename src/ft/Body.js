@@ -4,6 +4,7 @@ import BodyTopContent from './BodyTopContent';
 import FindaStore from './FindaStore';
 import TirePromo  from './TirePromo';
 import ClosingLists from './ClosingLists';
+import Footer from './Footer';
 
 function Body() {
     return (
@@ -16,7 +17,7 @@ function Body() {
             <TirePromo />
             {/* end spacer built into TirePromo */}
             <ClosingLists />
-            {/* footer */}
+            <Footer />
         </div>
     )
 }
