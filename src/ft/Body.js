@@ -16,6 +16,7 @@ function Body() {
             <TirePromo />
             {/* end spacer built into TirePromo */}
             <ClosingLists />
+            {/* footer */}
         </div>
     )
 }

@@ -10,7 +10,7 @@
     height: 455px;
 }
 
-.ovmain__header p{
+a.button p{
     display:none;
 }
 
@@ -22,6 +22,7 @@
     height: 90px;
     border:none;
     padding: 10px;
+    max-width: 400px;
 }
 
 .ovmain .button:hover{
@@ -156,14 +157,29 @@ span.ovmain__lowertext{
     display:none;
 }
 
-@media ( min-width: 425px){
+@media ( min-width: 570px){
     /* when small (less than px) */
     .ovmain__header {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         justify-content: center;
         align-items: flex-start;
         height: 600px;
+    }
+
+    .ovmain__headtext{
+        margin-bottom: 20px;
+    }
+
+    .ovmain a.button{
+        max-height: 100px;
+        flex-basis: 50%;
+        flex: 1;
+    }
+
+    a.button p{
+        display:inline;
+        margin-top: -25px;
     }
 
     .ovmain__header p{
@@ -179,7 +195,6 @@ span.ovmain__lowertext{
     }
 
     .ovmain__header .button{
-        flex-basis: 45%;
         margin: 10px;
         padding: 10px;
         height: 115px;
@@ -190,9 +205,7 @@ span.ovmain__lowertext{
         justify-content: space-around;
         text-align:center;
         margin-top: 100px;
-        margin-bottom: -100px;
         flex-basis: 100%;
-
     }
 
     .ovmain__headtext span{

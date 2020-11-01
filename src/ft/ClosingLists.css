@@ -1,0 +1,96 @@
+
+.closinglists__ul{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 98%;
+}
+
+.closinglists__ul li{
+    border-left: 4px solid #999;
+    margin-right: 10px;
+    overflow:hidden;
+}
+
+.closinglists__ul a{
+    display:flex;
+    flex-direction: column;
+    color: black;
+}
+
+.closinglists__ul .ul_wrapper {
+    margin-left: 10px;
+}
+
+.closinglists__ul a img{
+    margin-top: 10px;
+    height: 150px;
+    width: 120px;
+    position: relative;
+    left: -40px;
+}
+
+.closinglists li h4{
+    font-size: 12px;
+}
+
+.closinglists li p{
+    font-size: 11px;
+    color: #777;
+}
+
+.closinglists__spacer{
+    width: 100%;
+    border-bottom: 4px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.cl__listscontainer{
+    display:flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.cl__lists{
+    display:flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.cl__lists ul{
+    list-style-type: none;
+    margin-left: 0;
+    display:flex;
+    flex-direction:column;
+}
+
+.cl__lists li .phone{
+    color:blue;
+}
+
+.cl__lists ul h4{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.closinglists .copywrite{
+    display:flex;
+    justify-content: flex-end;
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+
+
+.cl__lists a{
+    font-size: 11px;
+    color: #aaa;
+}
+.cl__lists a:hover{
+    cursor:pointer;
+}
