@@ -1,10 +1,17 @@
 import React from 'react'
+import "./FirestoneComplete.css";
+import Header from "./Header";
 
 function FirestoneComplete() {
     return (
-        <div>
-            <p>I mean yeahhhh... we can fix THAT, just bring it in so we can take a look at it</p>
-            <p>we do close at 6 though, which is in 2 minutes</p>
+        <div classname='firestonecomplete'>
+            <div className='image_wrapper'>
+                <img
+                    src='https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/leaderboard-banner/fcac-web-ros-1440x70-des-covid19-mask.gif'
+                    alt='banner_add'
+                />
+            </div>
+            <Header />
         </div>
     )
 }
