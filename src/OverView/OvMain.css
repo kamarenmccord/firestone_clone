@@ -157,7 +157,7 @@ span.ovmain__lowertext{
     display:none;
 }
 
-@media ( min-width: 570px){
+@media (min-width: 570px){
     /* when small (less than px) */
     .ovmain__header {
         flex-direction: row;
@@ -165,6 +165,7 @@ span.ovmain__lowertext{
         justify-content: center;
         align-items: flex-start;
         height: 600px;
+        width: 100%;
     }
 
     .ovmain__headtext{
@@ -286,6 +287,16 @@ span.ovmain__lowertext{
     }
 }
 
-@media (min-width: 768 ){
+@media (min-width: 1440px ){
     /* larger phones/tablets */
+    .ovmain__headcontainer{
+        display:flex;
+        justify-content: center;
+    }
+
+    .ovmain__header{
+        width: 100%;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
 }

@@ -5,21 +5,23 @@ import { Link } from 'react-router-dom';
 function OvMain() {
     return (
         <div className='ovmain'>
-            <div className='ovmain__header'>
-                <div className='ovmain__headtext'>
-                    <span className='ovmain__uppertext'>MAKE YOUR CAR A</span>
-                    <span className='ovmain__lowertext'>FIRESTONE</span>
+            <div className='ovmain__headcontainer'>
+                <div className='ovmain__header'>
+                    <div className='ovmain__headtext'>
+                        <span className='ovmain__uppertext'>MAKE YOUR CAR A</span>
+                        <span className='ovmain__lowertext'>FIRESTONE</span>
+                    </div>
+                    <a href='/firestonetires' className='ovmain__upperbutton button'>
+                            <div className='ovmain__uppertext'>Go To</div>
+                            <div className='ovmain__lowertext'>FIRESTONE<br />TIRES</div>
+                            <p className='p1'>+More</p>
+                    </a>
+                    <a href='firestonecomplete' className='ovmain__lowerbutton button'>
+                            <div className='ovmain__uppertext'>Go To</div>
+                            <div className='ovmain__lowertext'>FIRESTONE COMPLETE<br />AUTO CARE</div>
+                            <p className='p2'>+More</p>
+                    </a>
                 </div>
-                <a href='/firestonetires' className='ovmain__upperbutton button'>
-                        <div className='ovmain__uppertext'>Go To</div>
-                        <div className='ovmain__lowertext'>FIRESTONE<br />TIRES</div>
-                        <p className='p1'>+More</p>
-                </a>
-                <a href='firestonecomplete' className='ovmain__lowerbutton button'>
-                        <div className='ovmain__uppertext'>Go To</div>
-                        <div className='ovmain__lowertext'>FIRESTONE COMPLETE<br />AUTO CARE</div>
-                        <p className='p2'>+More</p>
-                </a>
             </div>
 
             <div className='ovmain__companyinfo'>

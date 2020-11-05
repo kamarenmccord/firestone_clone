@@ -1,15 +1,13 @@
 
-.header__nav{
+.fc_header__nav{
     height: 40px;
     background-color: #ddd;
     display:flex;
     justify-content: flex-end;
+    align-items:center;
 }
 
-.header__nav ul{
-}
-
-.header__nav li{
+.fc_header__nav li{
     list-style-type: none;
     margin-left: 0;
     border-right: 1px solid #555;
@@ -19,14 +17,14 @@
     font-size: 12px;
 }
 
-.header__nav li:hover{
+.fc_header__nav li:hover{
     text-decoration: underline;
     cursor:pointer;
 }
 
 
 
-.header__nav li.last{
+.fc_header__nav li.last{
     border-right:none;
 }
 
@@ -36,16 +34,17 @@
 }
 
 .fc_header__main{
-    margin-top: 10px;
     display:flex;
     width: 100%;
     justify-content: space-evenly;
-    align-items:center;
     font-weight: 300;
 }
 
-.fc_header__main p{
-    margin-bottom: 3px;
+.fc_header__main .logo{
+    width: 200px;
+    height: 70px;
+    margin-left: 5px;
+    background-color: orange;
 }
 
 .fc_header__main .inputbutton{
@@ -56,10 +55,15 @@
     border:none;
     padding: 10px 15px;
     margin-left: 5px;
+    transition: 0.5s ease;
+}
+
+.fc_header__main .inputbutton:hover{
+    background-color: darkred;
 }
 
 .fc_header__main input{
-    border: 1px solid black;
+    border: 1px solid #999;
     padding: 10px;
     width: 100px;
 }
@@ -68,21 +72,66 @@
     background-color: white;
     border:none;
     font-size: 15px;
-    margin-bottom: 20px;
     padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    height:100%;
+}
+
+.fc_header__main .dropbtn:hover{
+    color:red;
+    cursor:pointer;
 }
 
 .fc_header__main .dropdown{
     position:relative;
     display:inline-block;
+    height: 70px;
 }
 
 .fc_header__main .dropdown-content{
     display:none;
     position:absolute;
     z-index:1;
+
+    background-color: #eee;
+    min-width: 600px;
+    max-width: 1440px;
+    height: 370px;
+    padding-left: 15%;
 }
 
 .fc_header__main .dropdown:hover .dropdown-content{
     display:block;
+}
+
+.fc_header__main .dropdown{
+    border-right: 1px solid #eee;
+}
+
+.fc_header__main span{
+    border-right: 1px solid #eee;
+    padding-right: 10px;
+    padding-left: 10px;
+    display:flex;
+    align-items:center;
+    height: 70px;
+}
+
+.fc_header__main span:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.fc_header__main span.last{
+    border-right:none;
+    padding: 0 20px;
+}
+
+.fc_header__main .searchbar{
+    min-width: 200px;
+}
+
+.searchbar p{
+    padding-top: 10px;
 }

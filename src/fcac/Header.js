@@ -1,13 +1,13 @@
 import React from 'react';
 import "./Header.css";
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import dotenv from 'dotenv';
 dotenv.config();
 
 function Header() {
     return (
         <div className='fc_header'>
-            <ul className='header__nav'>
+            <ul className='fc_header__nav'>
                 <li className='first'>Schedule an Appointment</li>
                 <li>Contact Us</li>
                 <li>Create an Account</li>
@@ -23,9 +23,8 @@ function Header() {
                 <div class="dropdown">
                     <button class="dropbtn">TIRES</button>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        Content
+                        some other content and then sum
                     </div>
                 </div>
                 <div class="dropdown">
@@ -46,7 +45,7 @@ function Header() {
                 </div> 
                 <span>COUPONS</span>
                 <span>FIND A STORE</span>
-                <span><ShoppingBasketIcon /></span>
+                <span className='last'><ShoppingCartIcon /></span>
                 <div className='searchbar'>
                     <p>Find Your Local Store:</p>
                     <input id='searchInput' placeholder='Zip Code'></input><button className='inputbutton'>Go</button>
