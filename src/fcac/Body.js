@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Body.css';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 function Body() {
 
@@ -133,7 +134,16 @@ function Body() {
                                 </div>
 
                                 <div className='content2 content'>
-                                    <h1>content2</h1>
+                                    <select name='width' id='width'>
+                                        <option value='null' required>Cross Section</option>
+                                    </select>
+                                    <select name='aspect' id='aspect'>
+                                        <option value='null' required>Aspect</option>
+                                    </select>
+                                    <select name='diameter' id='diameter'>
+                                        <option value='null' required>Rim Diameter</option>
+                                    </select>
+                                    <span><input placeholder='zipcode' /> Why?</span>
                                 </div>
 
                                 <button disabled>GET TIRE PRICING</button>
@@ -145,28 +155,29 @@ function Body() {
                         <div className='dropcontent dropright'>
                             <div className='menuop'>
                                 <span>OIL CHANGE</span>
-                                <span>></span>
+                                <span><KeyboardArrowRightIcon /></span>
                                 </div>
                             <div className='menuop'>
                                 <span>BRAKES</span>
-                                <span>></span>    
+                                <span><KeyboardArrowRightIcon /></span>    
                             </div>
                             <div className='menuop'>
                                 <span>BATTERIES</span>
-                                <span>></span>     
+                                <span><KeyboardArrowRightIcon /></span>     
                             </div>
                             <div className='menuop last'>
                                 <span>ALIGNMENT</span>
-                                <span>></span>     
+                                <span><KeyboardArrowRightIcon /></span>     
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='rightbox'>
                     <div className='title'>
-                        HELPING OUR NEIGHBORS<br/>
+                        <span>HELPING OUR NEIGHBORS</span><br />
                         SINCE 1926
                     </div>
+                    <a href='https://www.firestonecompleteautocare.com/contact-free-services/'><button>LEARN MORE</button></a>
                 </div>
             </div>
         </div>

@@ -3,6 +3,11 @@
     text-align:center;
 }
 
+.megamenu{
+    flex-grow: 1;
+    max-width: 1440px;
+}
+
 .megamenu ul{
     display:flex;
     align-items:center;

@@ -14,7 +14,9 @@ function Header() {
                 <li>Create an Account</li>
                 <li className='last'>Sign In</li>
             </ul>
-            <Megamenu />
+            <div className='megadiv'>
+                <Megamenu />
+            </div>
             <Body />
         </div>
     )
