@@ -23,7 +23,6 @@
 }
 
 
-
 .fc_header__nav li.last{
     border-right:none;
 }
@@ -31,107 +30,4 @@
 .image_wrapper{
     display:flex;
     justify-content: center;
-}
-
-.fc_header__main{
-    display:flex;
-    width: 100%;
-    justify-content: space-evenly;
-    font-weight: 300;
-}
-
-.fc_header__main .logo{
-    width: 200px;
-    height: 70px;
-    margin-left: 5px;
-    background-color: orange;
-}
-
-.fc_header__main .inputbutton{
-    background-color: #d31a0b;
-    color:white;
-    font-size: 20px;
-    font-weight:bold;
-    border:none;
-    padding: 10px 15px;
-    margin-left: 5px;
-    transition: 0.5s ease;
-}
-
-.fc_header__main .inputbutton:hover{
-    background-color: darkred;
-}
-
-.fc_header__main input{
-    border: 1px solid #999;
-    padding: 10px;
-    width: 100px;
-}
-
-.fc_header__main .dropbtn{
-    background-color: white;
-    border:none;
-    font-size: 15px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    height:100%;
-}
-
-.fc_header__main .dropbtn:hover{
-    color:red;
-    cursor:pointer;
-}
-
-.fc_header__main .dropdown{
-    position:relative;
-    display:inline-block;
-    height: 70px;
-}
-
-.fc_header__main .dropdown-content{
-    display:none;
-    position:absolute;
-    z-index:1;
-
-    background-color: #eee;
-    min-width: 600px;
-    max-width: 1440px;
-    height: 370px;
-    padding-left: 15%;
-}
-
-.fc_header__main .dropdown:hover .dropdown-content{
-    display:block;
-}
-
-.fc_header__main .dropdown{
-    border-right: 1px solid #eee;
-}
-
-.fc_header__main span{
-    border-right: 1px solid #eee;
-    padding-right: 10px;
-    padding-left: 10px;
-    display:flex;
-    align-items:center;
-    height: 70px;
-}
-
-.fc_header__main span:hover{
-    color: red;
-    cursor: pointer;
-}
-
-.fc_header__main span.last{
-    border-right:none;
-    padding: 0 20px;
-}
-
-.fc_header__main .searchbar{
-    min-width: 200px;
-}
-
-.searchbar p{
-    padding-top: 10px;
 }

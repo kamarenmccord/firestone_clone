@@ -1,0 +1,193 @@
+
+.body .uppercontent{
+    background-image: url('https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/Campaigns/covid-19/fcac-web-covid-2020-sept-tab-1024x567.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 560px;
+    display:flex;
+    color:white;
+    align-items:center;
+}
+
+.redbox{
+    width: 400px;
+    height: 90%;
+    background-color: #d81e05;
+    margin-right: 30px;
+    display:flex;
+    flex-direction:row;
+    position: relative;
+}
+
+.redbox .dropdown{
+    font-size: 1.2em;
+    height: 30px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.redbox .dropdown h4{
+    cursor: pointer;
+    padding: 20px;
+}
+
+.dropmenu_right{
+    border-left: 3px solid #781609;
+    background-color: darkred;
+}
+
+.dropmenu_right .dropcontent{
+    display:none;
+}
+
+.redbox .dropcontent{
+    background-color: #d81e05;
+    position:absolute;
+    margin-top: 500px;
+    justify-content: center;
+    align-items:center;
+    white-space: normal;
+}
+
+.rightbox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width: 100%;
+}
+
+.body .title{
+    font-weight: bolder;
+    font-size: 48px;
+}
+
+.dropcontent .sliderbutton{
+    display:flex;
+    height: 30px;
+    width: 275px;
+    margin-top: 10px;
+    margin-left: 33px;
+    justify-content: center;
+    border: 1px solid black;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+.sliderbutton .button_left{
+    background-color: white;
+    color: red;
+    padding: 2px 20px 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border-right: 2px solid black;
+}
+
+.sliderbutton .button_right{
+    cursor: pointer;
+    padding: 2px 20px 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.redbox .contentbox{
+    display:flex;
+    flex-direction: column;
+}
+
+.contentbox input{
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid lightgray;
+    width:300px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: none;
+
+}
+
+.contentbox span {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.contentbox span input{
+    width: 150px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+}
+
+.contentbox p{
+    font-size: 13px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.contentbox select{
+    width: 320px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 0 5px;
+    border: 1px solid lightgray;
+}
+
+.contentbox span select{
+    width: 173px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+}
+
+.redbox .dropleft{
+    margin-left: 183px;
+    width: 350px;
+    height: 450px;
+}
+
+.redbox .contentbox button{
+    margin-top: 30px;
+    height: 50px;
+    width: 310px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: 3px solid #a71907;
+    color: #eb8f82;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.redbox .dropright{
+    height: 450px;
+    width: 350px;
+    margin-right: 175px;
+    white-space:nowrap;
+}
+
+
+.redbox .dropright .menuop{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight:bold;
+    border-bottom: 1px solid white;
+    padding: 20px;
+    margin: 0 10px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.dropright .menuop.last{
+    border-bottom: none;
+}
+
+.content1{
+    display:block;
+}
+
+.content2{
+    display:none;
+}
