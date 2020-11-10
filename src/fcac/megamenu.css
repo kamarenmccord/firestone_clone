@@ -122,13 +122,14 @@
 
 .individual__li:hover .megamenu__dropcontent{
     justify-content: center;
-    padding-top: 20px;
     height: 330px;
-    padding-bottom: 20px;
 }
 
-.dropcontent{
+.megamenu .dropcontent{
+    padding-top:20px;
+    padding-bottom:20px;
     height: 350px;
+    cursor: default;
     flex-grow:1;
     display:flex;
     justify-content: space-between;
@@ -170,13 +171,39 @@
 
 .dropcontent .mid_content ul{
     flex-grow:1;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: space-evenly;  
     border-right: 1px solid #bbb;
+}
+
+.megamenu .repaircontent .mid_content{
+    width: 60%;
+}
+
+.megamenu .repairlist{
+    flex-grow:1;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;  
+    border-right: 1px solid #bbb;
+}
+
+.megamenu .repairlist div{
+    display:flex;
+    align-items:flex-start;
+}
+
+.megamenu .repairlist span{
+    margin-left: 20px;
+    white-space: normal;
+    max-width: 110px;
+    display:inline-block;
+    cursor:pointer;
 }
 
 li.image{

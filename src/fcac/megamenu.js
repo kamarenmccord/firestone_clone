@@ -52,18 +52,18 @@ function Megamenu() {
                             <div className='dropcontent repaircontent'>
                                 <div className='mid_content'>
                                     <h3>FIND REPAIR SERVICES</h3>
-                                    <ul className='repairlist'>
+                                    <div className='repairlist'>
                                         <div className='upperDiv'>
-                                            <li>Brakes</li>
-                                            <li>Alignment</li>
-                                            <li>Engine Repair Services</li>
+                                            <span>Brakes</span>
+                                            <span>Alignment</span>
+                                            <span>Engine Repair Services</span>
                                         </div>
                                         <div className='lowerDiv'>
-                                            <li>Tire Repair</li>
-                                            <li>Services</li>
-                                            <li>Steering & Suspension</li>
+                                            <span>Tire Repair</span>
+                                            <span>Services</span>
+                                            <span>Steering & Suspension</span>
                                         </div>
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
 
