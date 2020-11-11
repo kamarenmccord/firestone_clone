@@ -65,6 +65,12 @@ function Megamenu() {
                                         </div>
                                     </div>
                                 </div>
+                                <div className='right_content'>
+                                    <h3>SCHEDULE REPAIR SERVICES ONLINE</h3>
+                                    <p>You can save time in the store by pre-booking your repair service appointment online today. We'll take it from there. 
+                                    </p>
+                                    <a href='https://www.firestonecompleteautocare.com/appointment/schedule-appointment/'>SCHEDULE AN APPOINTMENT</a>
+                                </div>
                             </div>
 
                         </div>
@@ -77,8 +83,33 @@ function Megamenu() {
                         <div className='hiddenarrow'><KeyboardArrowDownIcon /></div>
                         <div className='megamenu__dropcontent'>
                             <div className='dropcontent maintenancecontent'>
-                                <div className='mid_content'>
-
+                                    <div className='mid_content'>
+                                        <h3>FIND MAINTENANCE SERVICES</h3>
+                                        <div className='upperDiv'>
+                                            <span>Batteries</span>
+                                            <span>Oil</span>
+                                            <span>Tune-Up</span>
+                                        </div>
+                                        <div className='upperMidDiv'>
+                                            <span>AC Service</span>
+                                            <span>Transmission</span>
+                                            <span>Free Vehicle Inspections</span>
+                                        </div>
+                                        <div className='lowerMidDiv'>
+                                            <span>Radiator</span>
+                                            <span>Service Warranty Options</span>
+                                            <span>Scheduled Maintenance</span>
+                                        </div>
+                                        <div className='lowerDiv'>
+                                            <span>Drivetrain</span>
+                                            <span>Wipers Blades</span>
+                                        </div>
+                                    </div>
+                                <div className='right_content'>
+                                    <h3>SCHEDULE MAINTENANCE SERVICES ONLINE</h3>
+                                    <p>You can save time in the store by pre-booking your maintenance service appointment online today. We'll take it from there. 
+                                    </p>
+                                    <a href='https://www.firestonecompleteautocare.com/appointment/schedule-appointment/'>SCHEDULE AN APPOINTMENT</a>
                                 </div>
                             </div>
 

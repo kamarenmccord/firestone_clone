@@ -1,3 +1,5 @@
+/* hoverable structure */
+
 .megamenu .individual__li.first{
     border-left: none;
     text-align:center;
@@ -118,7 +120,7 @@
     display:none;
 }
 
-/* removable styling */
+/* general rules */
 
 .individual__li:hover .megamenu__dropcontent{
     justify-content: center;
@@ -175,16 +177,99 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
+}
+
+/* repair content */
+
+.megamenu .repaircontent .mid_content{
+    flex-grow:1;
+    margin: 10px 0 20px 0;
+    padding-right: 40px;
+    align-items: flex-end;
     border-right: 1px solid #bbb;
 }
 
-.megamenu .repaircontent .mid_content{
-    width: 60%;
+.megamenu .repaircontent .mid_content h3{
+    align-self:flex-start;
+    margin-left: 25%;
+}
+
+.megamenu .repaircontent .mid_content .repairlist{
+    display:flex;
+    align-items:flex-end
+}
+
+.megamenu .repaircontent .right_content{
+    display:flex;
+    flex-direction:column;
+    width: 30%;
+    display:flex;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.megamenu .repaircontent .right_content p{
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 0.8em;
+    width: 250px;
+}
+
+.megamenu .repaircontent .right_content a{
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    background-color:#d81e05;
+    padding: 10px;
+    width: 250px;
+    display:flex;
+    justify-content: center;
+    transition: 0.4s all ease;
+}
+
+.megamenu .repaircontent .right_content a:hover{
+    background-color: #941403;
 }
 
 .megamenu .repairlist{
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: space-between;
+    justify-content: space-evenly;
+}
+
+.megamenu .repairlist div{
+    display:flex;
+    width: 90%;
+    align-items:flex-start;
+    justify-content: space-between;
+    font-size: 1.15em;
+}
+
+.megamenu .repairlist span{
+    white-space: normal;
+    max-width: 130px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+/* maintenance content */
+
+.megamenu .maintenancecontent .right_content{
     flex-grow:1;
+    margin: 10px 0 20px 0;
+    padding-right: 40px;
+    align-items: flex-end;
+    border-right: 1px solid #bbb;
+}
+
+.megamenu .maintenancecontent .mid_content{
+    flex:1;
     margin-bottom: 20px;
     display: flex;
     flex-direction:column;
@@ -193,17 +278,33 @@
     border-right: 1px solid #bbb;
 }
 
-.megamenu .repairlist div{
-    display:flex;
-    align-items:flex-start;
+.megamenu .maintenancecontent .mid_content h3{
+    align-self:flex-start;
+    margin-left: 25%;
 }
 
-.megamenu .repairlist span{
-    margin-left: 20px;
-    white-space: normal;
-    max-width: 110px;
-    display:inline-block;
-    cursor:pointer;
+.megamenu .maintenancecontent .right_content p{
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 0.8em;
+    width: 250px;
+}
+
+.megamenu .maintenancecontent .right_content a{
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    background-color:#d81e05;
+    padding: 10px;
+    width: 250px;
+    display:flex;
+    justify-content: center;
+    transition: 0.4s all ease;
+}
+
+.megamenu .maintenancecontent .right_content a:hover{
+    background-color: #941403;
 }
 
 li.image{
