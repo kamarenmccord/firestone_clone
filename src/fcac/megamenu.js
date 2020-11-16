@@ -17,14 +17,14 @@ function Megamenu() {
                         <div className='hiddenarrow'><KeyboardArrowDownIcon /></div>
                         <div className='megamenu__dropcontent'>
                             <div className='dropcontent tirecontent'>
-                                <div className='mid_content'>
+                                <div className='tires_left'>
                                     <ul>
                                         <h3>SHOP FOR TIRES</h3>
-                                        <li>Shop Tires by Vehicle</li>
-                                        <li>Shop by Tire Size</li>
-                                        <li>Shop for Tires by Type</li>
-                                        <li className='last'>Tire warranties</li>
-                                        <li className='image'>                                
+                                        <li><a href=''>Shop Tires by Vehicle</a></li>
+                                        <li><a href=''>Shop by Tire Size</a></li>
+                                        <li><a href=''>Shop for Tires by Type</a></li>
+                                        <li className='last'><a href=''>Tire warranties</a></li>
+                                        <li className='image'>          
                                             <img
                                                 src='https://assets.firestonecompleteautocare.com/content/dam/bsro/fcac/images/logos/90DayTryBuyTryLogo_Color.png/_jcr_content/renditions/cq5dam.thumbnail.140.100.png'
                                                 alt='warranty seal'
@@ -32,7 +32,7 @@ function Megamenu() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className='right_content'>
+                                <div className='tires_right'>
                                     <h3>SHOP BY TIRE BRANDS</h3>
                                 </div>
                             </div>
