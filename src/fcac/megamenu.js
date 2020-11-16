@@ -2,17 +2,14 @@ import React from 'react';
 import './megamenu.css';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import FcLogo from './FcLogo';
 
 function Megamenu() {
     return (
         <div className='megamenu'>
             <ul>
-                <li className='fc_header_logo first'>
-                    <img
-                        className='logo'
-                        src={process.env.FIRESTONELOGO}
-                        alt='logo'
-                    />
+                <li>
+                    <FcLogo />
                 </li>
                 <li className='individual__li first'>
                     <div className='megamenu__title'>
