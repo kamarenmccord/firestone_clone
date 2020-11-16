@@ -198,39 +198,6 @@
     align-items:flex-end
 }
 
-.megamenu .repaircontent .right_content{
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    align-items:center;
-    width: 30%;
-    margin-top: 20px;
-}
-
-.megamenu .repaircontent .right_content p{
-    line-height: 1.6;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    font-size: 0.8em;
-    width: 250px;
-}
-
-.megamenu .repaircontent .right_content a{
-    text-decoration:none;
-    color:white;
-    font-weight: bold;
-    background-color:#d81e05;
-    padding: 10px;
-    width: 250px;
-    display:flex;
-    justify-content: center;
-    transition: 0.4s all ease;
-}
-
-.megamenu .repaircontent .right_content a:hover{
-    background-color: #941403;
-}
-
 .megamenu .repairlist{
     width: 80%;
     margin-bottom: 20px;
@@ -284,8 +251,9 @@
     justify-content: space-between;
 }
 
-.megamenu .maintenancecontent .right_content{
+.megamenu .right_content{
     display:flex;
+    text-align:center;
     flex-direction:column;
     justify-content: flex-start;
     margin-top: 20px;
@@ -294,7 +262,7 @@
     border-right: 1px solid #bbb;
 }
 
-.megamenu .maintenancecontent .right_content p{
+.megamenu .right_content p{
     line-height: 1.6;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -302,7 +270,7 @@
     width: 250px;
 }
 
-.megamenu .maintenancecontent .right_content a{
+.megamenu .right_content a{
     text-decoration:none;
     color:white;
     font-weight: bold;
@@ -314,7 +282,7 @@
     transition: 0.4s all ease;
 }
 
-.megamenu .maintenancecontent .right_content a:hover{
+.megamenu .right_content a:hover{
     background-color: #941403;
 }
 
