@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FirestoneComplete.css";
 import Header from "./Header";
+import SubHeader from './SubHeader';
 
 function FirestoneComplete() {
     return (
@@ -12,6 +13,7 @@ function FirestoneComplete() {
                 />
             </div>
             <Header />
+            <SubHeader />
         </div>
     )
 }

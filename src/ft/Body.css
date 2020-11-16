@@ -1,5 +1,7 @@
 .body{
     color: black;
+    display:flex;
+    flex-direction:column;
 }
 
 .body__spacer{

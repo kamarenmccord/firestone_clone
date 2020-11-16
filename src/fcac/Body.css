@@ -1,18 +1,19 @@
 
-.body{
+.firestonecomplete .body{
     display:flex;
+    flex-direction:row;
     justify-content: center;
 }
 
-.body .uppercontent{
+.firestonecomplete .body .uppercontent{
     background-image: url('https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/Campaigns/covid-19/fcac-web-covid-2020-sept-tab-1024x567.jpg');
     background-size:cover;
     width: 100%;
+    max-width: 1440px;
     height: 560px;
     display:flex;
     color:white;
     align-items:center;
-    max-width: 1440px;
 }
 
 .redbox{
