@@ -3,6 +3,7 @@
 .megamenu .individual__li.first{
     border-left: none;
     text-align:center;
+    margin-left: 20px;
 }
 
 .megamenu{
@@ -48,6 +49,7 @@
     display:flex;
     justify-content: center;
     color:red;
+    margin-bottom: -25px;
 }
 
 .individual__li{
