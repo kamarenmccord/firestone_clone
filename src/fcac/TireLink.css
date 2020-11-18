@@ -1,0 +1,21 @@
+
+.tirelink{
+    margin: 5px 20px;
+    width: 25%;
+    height: 40px;
+}
+
+.tirelink a{
+    text-decoration:none;
+    display:flex;
+    align-items: center;
+    white-space: nowrap;
+    color:#444;
+    font-size: 14px;
+}
+
+.tirelink img{
+    margin-right: 10px;
+    width: 30px;
+    height: 40px;
+}

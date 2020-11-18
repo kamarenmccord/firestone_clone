@@ -193,21 +193,41 @@
     width:40%;
     border-right: 1px solid #bbb;
     padding: 10px 0;
-    background-color:lightskyblue;
 }
 
-.tirecontent .tires_right{
-    flex:1;
-    background-color:orange;
+.tirecontent .tires_left ul li{
+    width: 40%;
 }
+
+.tirecontent .tires_left a{
+    color:black;
+}
+
+.tirecontent h3{
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 
 .megamenu .tirecontent .tires_left ul{
     display:flex;
     height:100%;
-    width: 100%;
     flex-direction:column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+}
+
+.tirecontent .tires_right{
+    flex:1;
+}
+
+.tirecontent .tire_wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
 }
 
 /* repair content */

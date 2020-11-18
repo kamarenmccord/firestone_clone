@@ -1,5 +1,6 @@
 import React from 'react';
 import './megamenu.css';
+import TireLink from './TireLink';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import FcLogo from './FcLogo';
@@ -34,6 +35,69 @@ function Megamenu() {
                                 </div>
                                 <div className='tires_right'>
                                     <h3>SHOP BY TIRE BRANDS</h3>
+                                    <div className='tire_wrapper'>
+                                        <TireLink
+                                            link=''
+                                            title='Firestone All Season'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/FSAllSeason-sm-1.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Blizzak'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/BlizzakDMV1-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Destination'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/DestinationLE2-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Ecopia'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/EcopiaEP422-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='DriveGuard'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/DriveGuard-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Turanza'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/TuranzaEL42-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Fuel Fighter'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/ChampionHR-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Firehawk'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/FirehawkAS-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='PrimeWell'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/ValeraHT-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Potenza'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/PotenzaRE97AS-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Winterforce'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/Winterforce2UV-sm.png'
+                                        />
+                                                                                                                        <TireLink
+                                            link=''
+                                            title='Dueler'
+                                            src='https://www.firestonecompleteautocare.com/content/dam/bsro-sites/fcac/images/nav/Dueler685HT-sm.png'
+                                        />
+                                        
+                                    </div>
                                 </div>
                             </div>
 
