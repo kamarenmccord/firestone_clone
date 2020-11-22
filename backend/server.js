@@ -21,6 +21,7 @@ app.get('/cars', (req, res)=>{
             }
           }
         );
+        
         const data = await response.json();
         const jsonData = JSON.stringify(data, null, 2);
         res.send(jsonData); // this is the complete list of cars

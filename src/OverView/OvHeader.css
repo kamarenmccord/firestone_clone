@@ -36,6 +36,22 @@
         height: 70px;
     }
 
+    .ovheader__left{
+        display:flex;
+        height: 100%;
+        align-items: center;
+        margin-top: -20px;
+        justify-content: center;
+    }
+
+    .ovheader__right{
+        display:flex;
+        height: 100%;
+        align-items: center;
+        margin-top: -20px;
+        justify-content: center;
+    }
+
     .ovheader__left h2{
         display:inline;
         font-size: 20px;

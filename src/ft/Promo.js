@@ -1,11 +1,10 @@
 import React from 'react';
-import './RightPromo.css';
+import './promo.css';
 
-function RightPromo({background_img, header, text, subtext, link, video}) {
-    // should take props {background_img, header, text, link, video}
+const Promo = ({side, background_img, header, text, subtext, link, video}) => {
     return (
-        <div className='rightpromo' style={{ backgroundImage: `url(${background_img})`}}>
-            <div className='rightpromo__flexwrapper'>
+        <div className={side+'promo'} style={{ backgroundImage: `url(${background_img})`}}>
+            <div className={side+'promo__flexwrapper'}>
 
                 <div className='left_content'>
                     <iframe width="393" height="221" src={video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -17,9 +16,10 @@ function RightPromo({background_img, header, text, subtext, link, video}) {
                         <div className='captions'>{subtext}</div>
                         <a href={link}>Learn more</a>
                 </div>
+                
             </div>
         </div>
     )
 }
 
-export default RightPromo
+export default Promo;
