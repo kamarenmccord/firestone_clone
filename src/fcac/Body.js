@@ -3,10 +3,12 @@ import './Body.css';
 import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { getData } from './body_functions';
 
 function Body() {
 
     useEffect(()=>{
+        getData();
     }, [])
 
     const switchDisplay = (elem) =>{
