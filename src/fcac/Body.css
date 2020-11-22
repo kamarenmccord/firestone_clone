@@ -37,6 +37,41 @@
     white-space: nowrap;
 }
 
+.redbox .contentbox .title{
+    font-size: 15px;
+    z-index: 1;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:white;
+    color:black;
+    font-weight:normal;
+    width: 300px;
+    margin-left: 10px;
+    padding: 0 10px;
+    position: relative;
+    border: 1px solid #999;
+}
+
+.contentbox .dropdown{
+    position: relative;
+}
+
+.redbox .contentbox .menu{
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 0;
+    background-color:white;
+    color:black;
+    width: 332px;
+    margin-left: 20px;
+    max-height: 380px;
+    overflow: scroll;
+    padding: 5px 5px;
+    display: none;
+}
+
 .redbox .dropdown h4{
     cursor: pointer;
     padding: 20px;
@@ -130,47 +165,47 @@
 }
 
 .contentbox input{
+    color:black;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid lightgray;
-    width:300px;
     height: 30px;
     margin-left: 20px;
-    margin-top: 15px;
-    border-radius: none;
-
+    margin-top: 10px;
+    width: 140px;
+    height: 25px;
+    margin-right: 10px;
 }
 
-.contentbox span {
+.contentbox select{
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.contentbox span p {
     font-size: 14px;
     text-decoration: underline;
 }
 
-.contentbox span input{
-    width: 150px;
-    margin-right: 10px;
-    border: 1px solid lightgray;
+.contentbox .tpmsDropdown .title{
+    width: 140px;
+}
+
+.contentbox .short{
+    display:inline-block;
 }
 
 .contentbox p{
+    display:inline-block;
     font-size: 13px;
     margin-left: 20px;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
-.contentbox select{
-    width: 320px;
-    height: 30px;
-    margin-left: 20px;
-    margin-top: 15px;
-    padding: 0 5px;
-    border: 1px solid lightgray;
-}
-
-.contentbox span select{
-    width: 173px;
-    margin-right: 10px;
-    border: 1px solid lightgray;
+.contentbox .master{
+    position:relative;
 }
 
 .redbox .dropleft{
@@ -180,7 +215,7 @@
 }
 
 .redbox .contentbox button{
-    margin-top: 30px;
+    margin-top: 10px;
     height: 50px;
     width: 310px;
     margin-left: 20px;
@@ -222,4 +257,30 @@
 
 .content2{
     display:none;
+}
+
+.contentbox .master{
+    display:inline-block;
+    cursor:pointer;
+}
+
+.contentbox .hidden{
+    display: none;
+    background-color: #aaa;
+    color: #111;
+    width: 150px;
+    height: 80px;
+    font-size:10px;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    right: -150px;
+}
+
+.contentbox .master:hover .hidden{
+    display:block;
+}
+
+.contentbox .disabled{
+    background-color: #f3bcb4;
 }

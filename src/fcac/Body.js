@@ -1,49 +1,12 @@
 import React, { useEffect } from 'react';
 import './Body.css';
+import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Body() {
 
     useEffect(()=>{
-        // year
-        let options= '';
-        let years = [];
-        for (let i = 1983; i<=2021; i++){
-            years.unshift(i);
-        }
-        options += `<option values='' selected>year</option>`
-        for (let x of years){
-            options += `<option value=${x}>${x}</option>`
-        }
-        document.getElementById('year').innerHTML = options;
-
-        // make
-        options = '';
-        let Makes = ['Ford', 'Toyota', 'Alfa Romero', 'Audi', 'BMW', 'Mercedies', 'Jaguar', 'Chevrolet'].sort();
-        options += `<option values='' selected>Make</option>`;
-        for (let x of Makes){
-            options += `<option value=${x}>${x}</option>`;
-        }
-        document.getElementById('make').innerHTML = options;
-
-        // model
-        options = '';
-        let models = ['E46', 'M3', 'civic', 'accord', 'spider', 'corolla' ,'camry', 'tahoe', 'escort']
-        options += `<option values='' selected>Model</option>`;
-        for (let x of models){
-            options += `<option value=${x}>${x}</option>`;
-        }
-        document.getElementById('model').innerHTML = options;
-
-        // submodel
-        options = '';
-        let submodels = ['ex', 'dx', 'ls', 's', 'ss'];
-        options += `<option values='' selected>Submodel</option>`;
-        for (let x of submodels){
-            options += `<option value=${x}>${x}</option>`;
-        }
-        document.getElementById('submodel').innerHTML = options;
-
     }, [])
 
     const switchDisplay = (elem) =>{
@@ -72,10 +35,12 @@ function Body() {
                     
                     for (let y of subDiv){
                         if (x.className == 'button_left subchoicebutton' && y.className == 'content1 content'){
-                            y.style.display = 'inline';
+                            y.style.display = 'flex';
+                            y.style.flexDirection= 'column';
                         } else if (x.className == 'button_right subchoicebutton' && y.className == 'content2 content')
                         {
-                            y.style.display = 'inline';
+                            y.style.display = 'flex';
+                            y.style.flexDirection= 'column';
                         } else {
                             if (y.className=='content1 content' || y.className=='content2 content'){
                             y.style.display = 'none';
@@ -109,28 +74,57 @@ function Body() {
                             <div className='contentbox'>
                                 <p>All fields are required</p>
                                 <div className='content1 content'>
-                                    <select name='year' id='year'>
-                                        <option value='null' required>Year</option>
-                                    </select>
-                                    <select name='year' id='make'>
-                                        <option value='null' required>Make</option>
-                                    </select>
-                                    <select name='year' id='model'>
-                                        <option value='null' required>Model</option>
-                                    </select>
-                                    <select name='year' id='submodel'>
-                                        <option value='null' required>Submodel</option>
-                                    </select>
 
+                                    <div className='yearDropdown dropdown'>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
+                                        <div className='menu pointerCursor hide'>
+                                            <div className='option' id='option1'>JS to populate here</div>
+                                        </div>
+                                    </div>
+
+                                    <div className='makeDropdown dropdown'>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>Make <ExpandMoreIcon /></div>
+                                        <div className='menu pointerCursor hide'>
+                                            <div className='option' id='option1'>Not connected</div>
+                                        </div>
+                                    </div>
+
+                                    <div className='modelDropdown dropdown'>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>Model <ExpandMoreIcon /></div>
+                                        <div className='menu pointerCursor hide'>
+                                            <div className='option' id='option1'>Not Connected</div>
+                                        </div>
+                                    </div>
+
+                                    <div className='submodelDropdown dropdown'>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>SubModel <ExpandMoreIcon /></div>
+                                        <div className='menu pointerCursor hide'>
+                                            <div className='option' id='option1'>Not Connected</div>
+                                        </div>
+                                    </div>
+                                    
                                     <span>
-                                        <select name='year' id='tmps'>
-                                        <option value='null' required>Tpms: no</option>
-                                        <option value='yes'>yes</option>
-                                        <option value='no'>no</option>
-                                        </select> What's this?
+                                    <div className='tpmsDropdown short dropdown'>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>TMPS<ExpandMoreIcon /></div>
+                                        <div className='menu pointerCursor hide'>
+                                            <div className='option' id='option1'>Not Connected</div>
+                                        </div>
+                                    </div>
+                                    <div className='master'>
+                                        <p>what's this?</p><div className='hidden'>
+                                            WHAT IS TPMS?
+                                            TPMS is an electronic system that alerts you with a dashbaord indicator light when your car's tire pressure fails to the point of needing inflation.
+                                        </div>
+                                    </div>
                                     </span>
 
-                                    <span><input placeholder='zipcode' /> Why?</span>
+                                    <span><input placeholder='zipcode' />
+                                    <div className='master'>
+                                        <p>Why?</p><div className='hidden'>
+                                            WHY DO WE ASK ABOUT YOUR ZIPCODE? ZIP code is needed for local pricing.
+                                        </div>
+                                    </div>
+                                    </span>
                                 </div>
 
                                 <div className='content2 content'>
@@ -143,7 +137,14 @@ function Body() {
                                     <select name='diameter' id='diameter'>
                                         <option value='null' required>Rim Diameter</option>
                                     </select>
-                                    <span><input placeholder='zipcode' /> Why?</span>
+                                    <span>
+                                        <input placeholder='zipcode' />
+                                        <div className='master'>
+                                        <p>Why?</p><div className='hidden'>
+                                            WHY DO WE ASK ABOUT YOUR ZIPCODE? ZIP code is needed for local pricing.
+                                        </div>
+                                        </div>
+                                    </span>
                                 </div>
 
                                 <button disabled>GET TIRE PRICING</button>
