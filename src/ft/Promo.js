@@ -14,7 +14,7 @@ const Promo = ({side, background_img, header, text, subtext, link, video}) => {
                     <h1 className='add__title'>{header}</h1>
                     <div className='description'>{text}</div>
                         <div className='captions'>{subtext}</div>
-                        <a href={link}>Learn more</a>
+                        <a className='button' href={link}>Learn more</a>
                 </div>
                 
             </div>

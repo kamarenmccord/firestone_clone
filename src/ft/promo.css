@@ -23,7 +23,13 @@
     align-items:center;
 }
 
-.leftpromo .right_content{
+.rightpromo__flexwrapper{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.tirepromo .right_content{
     max-width: 400px;
     margin-left: 10px;
     padding:20px;
@@ -38,7 +44,7 @@
     font-size: 36px;
 }
 
-.leftpromo a{
+.button{
     display:flex;
     justify-content: center;
     align-items:center;
@@ -51,7 +57,7 @@
     margin-right: auto;
 }
 
-.leftpromo .description{
+.tirepromo .description{
     color: #ccc;
     line-height: 1.5;
     font-size: 15px;
