@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000;
 const app = express()
 
 app.get('/', (req, res)=>{
-    res.status(200).send('server is up');
+    res.status(200).send('FirestoneClone server is up!');
 })
 
 app.get('/cars', (req, res)=>{
@@ -16,14 +16,14 @@ app.get('/cars', (req, res)=>{
           'https://parseapi.back4app.com/classes/Carmodels_Car_Model_List?limit=1500?order=-Year,Make,Model,Category',
           {
             headers: {
-              'X-Parse-Application-Id': 'rGw0TqqQ4f6JBUrcacxmNizpIfWeCx1k2r3Hza96', // This is your app's application id
-              'X-Parse-REST-API-Key': `${process.env.BACK4APP_TOKEN}`, // This is your app's REST API key
+              'X-Parse-Application-Id': 'rGw0TqqQ4f6JBUrcacxmNizpIfWeCx1k2r3Hza96',
+              'X-Parse-REST-API-Key': `${process.env.BACK4APP_TOKEN}`,
             }
           }
         );
-        const data = await response.json(); // Here you have the data that you need
+        const data = await response.json();
         const jsonData = JSON.stringify(data, null, 2);
-        res.send(jsonData);
+        res.send(jsonData); // this is the complete list of cars
       })();
 })
 

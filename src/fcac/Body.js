@@ -10,7 +10,7 @@ function Body() {
     }, [])
 
     const switchDisplay = (elem) =>{
-
+        // adds pagination to redbox
         if (elem.currentTarget.tagName === 'H4'){
             let all_hFours = document.getElementsByClassName('hFour');
 
@@ -78,36 +78,36 @@ function Body() {
                                     <div className='yearDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>JS to populate here</div>
+                                            <div className='option' id='option1'>Error: 404 not found,<br /> Please call</div>
                                         </div>
                                     </div>
 
                                     <div className='makeDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Make <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Not connected</div>
+                                            <div className='option' id='option1'>Choose a Year</div>
                                         </div>
                                     </div>
 
                                     <div className='modelDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Model <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Not Connected</div>
+                                            <div className='option' id='option1'>Choose a Make</div>
                                         </div>
                                     </div>
 
                                     <div className='submodelDropdown dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>SubModel <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>Submodel <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Not Connected</div>
+                                            <div className='option' id='option1'>Choose a Model</div>
                                         </div>
                                     </div>
                                     
                                     <span>
                                     <div className='tpmsDropdown short dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>TMPS<ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>TMPS:NO <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Not Connected</div>
+                                            <div className='option' id='option1'>No</div>
                                         </div>
                                     </div>
                                     <div className='master'>
