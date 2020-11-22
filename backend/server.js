@@ -1,11 +1,13 @@
 const express = require('express');
 require('dotenv').config();
 const fetch = require('node-fetch');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 8000;
 
 const app = express()
 
+app.use(cors());
 app.get('/', (req, res)=>{
     res.status(200).send('FirestoneClone server is up!');
 })
