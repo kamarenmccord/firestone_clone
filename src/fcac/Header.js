@@ -2,7 +2,6 @@ import React from 'react';
 import "./Header.css";
 import Megamenu from './megamenu';
 import dotenv from 'dotenv';
-import Body from './Body';
 dotenv.config();
 
 function Header() {
@@ -17,7 +16,6 @@ function Header() {
             <div className='megadiv'>
                 <Megamenu />
             </div>
-            <Body />
         </div>
     )
 }
