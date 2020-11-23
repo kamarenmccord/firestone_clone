@@ -19,7 +19,7 @@ function OvFooter() {
             <div className='ovfooter--large'>
                 <div className='ovfooter__nav'>
                     <ul className='upper_list'>
-                        <li classname='listart'>Bridgestone Consumer Tires</li>
+                        <li className='listart'>Bridgestone Consumer Tires</li>
                         <li>Motorcycle Kart Tires</li>
                         <li>Tire Saftey</li>
                         <li>Bridgestone Golf</li>
