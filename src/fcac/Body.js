@@ -152,7 +152,7 @@ function Body() {
                                     </span>
                                 </div>
 
-                                <button disabled>GET TIRE PRICING</button>
+                                <button id='redboxButton' disabled>GET TIRE PRICING</button>
                             </div>
                         </div>
                     </div>
