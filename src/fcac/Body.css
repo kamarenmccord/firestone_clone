@@ -59,17 +59,24 @@
 
 .redbox .contentbox .menu{
     position: absolute;
+    display:flex;
+    flex-direction:column;
     z-index: 10;
     top: 30px;
     left: 0;
     background-color:white;
     color:black;
     width: 332px;
+    max-height: 350px;
     margin-left: 20px;
     max-height: 380px;
     overflow: scroll;
     padding: 5px 5px;
     display: none;
+}
+
+.redbox .option:hover{
+    background-color:lightblue;
 }
 
 .redbox .dropdown h4{

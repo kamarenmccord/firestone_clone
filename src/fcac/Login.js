@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     return (
         <div className='login'>
             <div className='login__header'>
@@ -22,12 +25,12 @@ const Login = () => {
                 <form className='loginform'>
                     <div className='logininfo'>
                         <p>Email: </p>
-                        <input type='email' placeholder='email' />
+                        <input type='email' value={email} onChange={(event)=> setEmail(event.target.value)} placeholder='email' />
                     </div>
  
                     <div className='logininfo'>
                         <p>Password: </p>
-                        <input type='password' placeholder='password' />
+                        <input type='password' value={password} onChange={(event)=> setPassword(event.target.value)} placeholder='password' />
                     </div>
                     <button type='submit'>Login</button>
                 </form>

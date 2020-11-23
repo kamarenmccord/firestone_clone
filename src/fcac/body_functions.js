@@ -3,16 +3,12 @@ const BASE_URL = 'http://localhost:9001/cars';
 
 export const getData = () =>{
     // fetch data from backend
-    let data = '';
-    fetch(BASE_URL,{
+    return fetch(BASE_URL,{
         method: 'GET'
     }).then(response=>{
         return response.json()
-    }).then(data=>{
-        BuildData(data);
-    }).catch(e=>{
-        console.log(e);
-    })
+    }).then(data=>(extractor('Year', data))
+    ).catch(e=>{console.log(e)})
 };
 
 const extractor = (type, list) => {
@@ -30,16 +26,19 @@ const extractor = (type, list) => {
     return setList;
 }
 
+export const getValue = (index) =>{
+    //do something on Click
+    console.log(index);
+}
+
 export const BuildData = (carList) =>{
     // build the drop menus with the given data
     let dropdown = document.getElementsByClassName('yearDropdown')[0].children[1];
 
-    let filteredYears = extractor('Year', carList);
-
-    for (let i in filteredYears){
-        dropdown.innerHTML += `<div className='option' value='option${i}>${filteredYears[i]}</div>`;
-    }
-
-    console.log(dropdown);
+    dropdown.innerHTML = 'Year';
+    
+    carList.forEach((value, index)=>{
+        dropdown.innerHTML += `<div class='option' id='option${index}' onClick=${(value)=>getValue()}>${value}</div>`;
+    })
 
 }

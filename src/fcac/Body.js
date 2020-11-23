@@ -3,12 +3,15 @@ import './Body.css';
 import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { getData } from './body_functions';
+import { getData, BuildData } from './body_functions';
+import { render } from '@testing-library/react';
 
 function Body() {
 
     useEffect(()=>{
-        getData();
+        getData().then(years=>{
+            BuildData(years);
+        });
     }, [])
 
     const switchDisplay = (elem) =>{
@@ -80,7 +83,7 @@ function Body() {
                                     <div className='yearDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Error: 404 not found,<br /> Please call</div>
+                                            <div className='option' id='option1'>Loading Please wait</div>
                                         </div>
                                     </div>
 
