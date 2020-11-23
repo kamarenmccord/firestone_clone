@@ -3,7 +3,7 @@ import './Body.css';
 import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { getData, BuildData } from './body_functions';
+import { getData, BuildData, getValue } from './body_functions';
 import { render } from '@testing-library/react';
 
 function Body() {

@@ -26,9 +26,27 @@ const extractor = (type, list) => {
     return setList;
 }
 
-export const getValue = (index) =>{
-    //do something on Click
-    console.log(index);
+export const addListeners = (type) =>{
+    var group = '';
+    if (type==='year'){
+        const years = document.getElementsByClassName('yearDropdown')[0];
+        group = years.children[1].children;
+    } else if (type==='make'){
+        const years = document.getElementsByClassName('makeDropdown')[0];
+        group = years.children[1].children;
+    }
+    Object.entries(group).forEach((elem, index)=>{
+        elem[1].addEventListener('click', ()=>{
+            //function that changes things
+            const value = elem[1].innerText;
+            const menu = elem[1].parentElement;
+            const displayValue = menu.parentElement.children[0];
+            menu.style.display = 'none';
+            displayValue.innerText = value;
+            displayValue.value = value;
+            console.log(displayValue.value);
+        })
+    })
 }
 
 export const BuildData = (carList) =>{
@@ -38,7 +56,8 @@ export const BuildData = (carList) =>{
     dropdown.innerHTML = 'Year';
     
     carList.forEach((value, index)=>{
-        dropdown.innerHTML += `<div class='option' id='option${index}' onClick=${(value)=>getValue()}>${value}</div>`;
+        dropdown.innerHTML += `<div class='option' id='option${index}'>${value}</div>`;
     })
+    addListeners('year');
 
 }
