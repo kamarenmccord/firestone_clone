@@ -1,18 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Body.css';
 import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { getData, BuildData, getValue } from './body_functions';
-import { render } from '@testing-library/react';
+import { getData } from './body_functions';
 
 function Body() {
 
+    const [carListOptions, carListOptionsSet] = useState(['']);
+
     useEffect(()=>{
-        getData().then(years=>{
-            BuildData(years);
-        });
-    }, [])
+        getData()
+        .then((data)=>{
+            console.log(data);
+            carListOptionsSet(data['results'])
+        .catch(e=>{console.log(e)});
+        }, [carListOptions])
+    })
 
     const switchDisplay = (elem) =>{
         // adds pagination to redbox
@@ -83,7 +87,9 @@ function Body() {
                                     <div className='yearDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Loading Please wait</div>
+                                            {carListOptions.map((op, index)=>(
+                                                <div className='option' id='option1'>Loading Please wait</div>
+                                            ))}
                                         </div>
                                     </div>
 
