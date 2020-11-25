@@ -23,13 +23,85 @@ function Body() {
         parentElem.children[1].style.display = 'none';
     }
 
+    const resetFilter = () =>{
+        const data = carListOptions;
+
+        carYearSet(filterOut('Year', data));
+        carMakeSet(filterOut('Make', data));
+        carModelSet(filterOut('Model', data));
+        carSubmodelSet(filterOut('Category', data));
+    }
+
+    const filterMakes = () => {
+        // return makes that existed that year
+        let returnList = []
+        carListOptions.forEach((carObject)=>{
+            if (carObject.Year == userYear){
+                returnList.push(carObject.Make)
+        }})
+
+        // filter out all duplicates
+        let setList = [...new Set(returnList.sort())];
+        //return filtered list
+        return setList;
+    }
+
+    const filterModels = () =>{
+        let returnList = []
+        carListOptions.forEach((carObject)=>{
+            if (carObject.Year == userYear && carObject.Make == userMake){
+                returnList.push(carObject.Model)
+            }
+        })
+            // filter out all duplicates
+            let setList = [...new Set(returnList.sort())];
+            //return filtered list
+            return setList;
+    }
+
+    const filterSubmodels = () =>{
+        let returnList = []
+        carListOptions.forEach((carObject)=>{
+            if (carObject.Year == userYear && carObject.Make == userMake && carObject.Model == userModel){
+                returnList.push(carObject.Category)
+            }
+        })
+            // filter out all duplicates
+            let setList = [...new Set(returnList.sort())];
+            //return filtered list
+            return setList;
+    }
+
+    const applyFilter = (step) =>{
+        // take userOptions and filter next option
+        if (userYear){
+            //filter makes
+            carMakeSet(filterMakes())
+        }
+        if (userMake){
+            //filter models
+            carModelSet(filterModels())
+        }
+        if (userModel){
+            //filter Submodels
+            carSubmodelSet(filterSubmodels())
+        }
+    }
+
     const getYear = (yearElem) =>{
-        userYearSet(yearElem.currentTarget.innerText);
-        userMakeSet('');
+        hideMenu(yearElem);
+        userMakeSet(''); //effects the elem.title not here
         userModelSet('');
         userSubmodelSet('');
-        hideMenu(yearElem);
+        userYearSet(yearElem.currentTarget.innerText);
     }
+
+    useEffect(()=>{
+        applyFilter();
+        if (!userSubmodel){
+            deactivateButton();
+        }
+    }, [userYear, userMake, userModel, userSubmodel])
 
     const getMake = (makeElem) =>{
         userMakeSet(makeElem.currentTarget.innerText);
@@ -48,6 +120,7 @@ function Body() {
         userSubmodelSet(submodelElem.currentTarget.innerText);
         hideMenu(submodelElem);
         activateButton();
+        activateButton();
     }
 
     const deactivateButton = () =>{
@@ -65,7 +138,7 @@ function Body() {
     }
 
     const submitButton = (button) =>{
-        console.log('userYear: ', userYear);
+        console.log(`userData: {year: ${userYear}, make: ${userMake}, model: ${userModel}, submodel: ${userSubmodel}}`);
     }
 
 
@@ -86,7 +159,7 @@ function Body() {
         .then((data)=>{
             carListOptionsSet(data['results']);
             carYearSet(filterOut('Year', data));
-            carMakeSet(filterOut('Make', data));
+            carMakeSet(filterOut('Make', data).sort());
             carModelSet(filterOut('Model', data));
             carSubmodelSet(filterOut('Category', data));
         })
@@ -178,7 +251,7 @@ function Body() {
                                         {carMake && userYear ? carMake.map((make, index)=>(
                                                 <div className='option'
                                                     key={`option${index}`} 
-                                                    onClick={getYear.bind(this)}
+                                                    onClick={getMake.bind(this)}
                                                 >{make}</div>
                                             )): <div className='option' key='null' id='null'>Choose a year</div>}
                                         </div>
@@ -187,14 +260,24 @@ function Body() {
                                     <div className='modelDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Model <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Choose a Make</div>
+                                        {carModel && userMake ? carModel.map((model, index)=>(
+                                                <div className='option'
+                                                    key={`option${index}`} 
+                                                    onClick={getModel.bind(this)}
+                                                >{model}</div>
+                                            )): <div className='option' key='null' id='null'>Choose a Make</div>}
                                         </div>
                                     </div>
 
                                     <div className='submodelDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Submodel <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Choose a Model</div>
+                                        {carSubmodel && userModel ? carSubmodel.map((submodel, index)=>(
+                                                <div className='option'
+                                                    key={`option${index}`} 
+                                                    onClick={getSubmodel.bind(this)}
+                                                >{submodel}</div>
+                                            )): <div className='option' key='null' id='null'>Choose a Model</div>}
                                         </div>
                                     </div>
                                     
@@ -202,7 +285,7 @@ function Body() {
                                     <div className='tpmsDropdown short dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>TMPS:NO <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>No</div>
+                                            <div className='option' id='option0'>{userYear>1994? 'yes' : 'no'}</div>
                                         </div>
                                     </div>
                                     <div className='master'>
