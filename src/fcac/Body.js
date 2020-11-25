@@ -1,11 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Body.css';
 import { toggleDisplay } from './dropdown_menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { getData } from './body_functions';
+import { useStateValue } from '../stateProvider';
 
 function Body() {
+
+    const [{vehicle}, dispatch] = useStateValue();
+    console.log(vehicle)
+    const updateUser = () =>{
+        dispatch({
+            type:'ADD_CAR',
+            car:{
+                id: vehicle.length+1,
+                year:userYear,
+                make:userMake,
+                model:userModel,
+                submodel:userSubmodel,
+            }
+        })
+    }
 
     let [carListOptions, carListOptionsSet] = useState([]);
     let [ carSubmodel, carSubmodelSet ] = useState([]);
@@ -139,7 +156,9 @@ function Body() {
     }
 
     const submitButton = (button) =>{
-        console.log(`userData: {year: ${userYear}, make: ${userMake}, model: ${userModel}, submodel: ${userSubmodel}}`);
+        // each car added to userState should have a unique id
+        // should not update user if car already exists in users "garage"
+        updateUser();
     }
 
 
@@ -332,7 +351,7 @@ function Body() {
                                     </span>
                                 </div>
 
-                                <button onClick={submitButton.bind(this)} id='redboxButton'>GET TIRE PRICING</button>
+                                <button onClick={submitButton.bind(this)} id='redboxButton'><Link to='/userpage'>GET TIRE PRICING</Link></button>
                             </div>
                         </div>
                     </div>

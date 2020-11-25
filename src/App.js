@@ -6,6 +6,7 @@ import NewUser from './NewUser';
 import OverViewHome from './OverView/OverViewHome';
 import FirestoneTires from './ft/FirestoneTires';
 import FirestoneComplete from './fcac/FirestoneComplete';
+import UserPage from './fcac/UserPage';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path='/newuser'>
             <NewUser />
+          </Route>
+          <Route path='/userpage'>
+            <UserPage />
           </Route>
           <Route path='/'>
             <OverViewHome />
