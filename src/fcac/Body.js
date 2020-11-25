@@ -23,15 +23,6 @@ function Body() {
         parentElem.children[1].style.display = 'none';
     }
 
-    const resetFilter = () =>{
-        const data = carListOptions;
-
-        carYearSet(filterOut('Year', data));
-        carMakeSet(filterOut('Make', data));
-        carModelSet(filterOut('Model', data));
-        carSubmodelSet(filterOut('Category', data));
-    }
-
     const filterMakes = () => {
         // return makes that existed that year
         let returnList = []
@@ -165,7 +156,7 @@ function Body() {
         })
         .catch(e=>{console.log(e)})
 
-    }, [carListOptionsSet])
+    }, [])
 
     const switchDisplay = (elem) =>{
         // adds pagination to redbox
