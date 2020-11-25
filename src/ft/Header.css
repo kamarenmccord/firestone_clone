@@ -10,6 +10,10 @@
     z-index: 100;
 }
 
+.header__nav a{
+    color:white;
+}
+
 .header__nav {
     display:flex;
     flex-direction: row;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import MenuIcon from '@material-ui/icons/Menu';
 import DirectionsCarIcon from '@material-ui/icons/DirectionsCar';
@@ -23,8 +24,8 @@ function Header() {
                 <p className='logo'><span className='logo'>FIRESTONE</span></p>
                 <p><LocationOnIcon /></p>
                 <p><DateRangeIcon /></p>
-                <p className='text'>Let's Talk</p>
-                <p className='lastIcon text'>Sign In</p>
+                <p className='text'><a href="tel:1-844-408-4396">Let's Talk</a></p>
+                <p className='lastIcon text'><Link to='/login'>Sign In</Link></p>
             </nav>
         </div>
     )

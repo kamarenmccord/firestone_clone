@@ -8,18 +8,21 @@ import { getData } from './body_functions';
 function Body() {
 
     let [carListOptions, carListOptionsSet] = useState([]);
+    let [ carSubmodel, carSubmodelSet ] = useState([]);
+    let [ carMake, carMakeSet ] = useState([]);
+    let [ carModel, carModelSet ] = useState([]);
+    let [ tpmsOptions, tpmsOptionSet ] = useState([]);
     let [ carYear, carYearSet ] = useState('');
     let [ userYear, userYearSet ] = useState('');
-    let [ carMake, carMakeSet ] = useState([]);
     let [ userMake, userMakeSet ] = useState('');
-    let [ carModel, carModelSet ] = useState([]);
     let [ userModel, userModelSet ] = useState('');
-    let [ carSubmodel, carSubmodelSet ] = useState([]);
     let [ userSubmodel, userSubmodelSet ] = useState('');
+    let [userTpms, userTpmsSet ] = useState('No');
+    let [userZip, userZipSet ] = useState('');
+
 
     const hideMenu = (menuElem) =>{
         const parentElem = menuElem.currentTarget.parentElement.parentElement;
-        parentElem.children[0].innerText = menuElem.currentTarget.innerText;
         parentElem.children[1].style.display = 'none';
     }
 
@@ -63,7 +66,7 @@ function Body() {
             return setList;
     }
 
-    const applyFilter = (step) =>{
+    const applyFilter = () =>{
         // take userOptions and filter next option
         if (userYear){
             //filter makes
@@ -95,6 +98,9 @@ function Body() {
     }, [userYear, userMake, userModel, userSubmodel])
 
     const getMake = (makeElem) =>{
+        if (userYear > 1994){
+            tpmsOptionSet(['Yes', 'No'])
+        }
         userMakeSet(makeElem.currentTarget.innerText);
         userModelSet('');
         userSubmodelSet('');
@@ -111,7 +117,11 @@ function Body() {
         userSubmodelSet(submodelElem.currentTarget.innerText);
         hideMenu(submodelElem);
         activateButton();
-        activateButton();
+    }
+
+    const getTpms = (tpmsElem) =>{
+        hideMenu(tpmsElem);
+        userTpmsSet(tpmsElem.currentTarget.innerText);
     }
 
     const deactivateButton = () =>{
@@ -225,7 +235,7 @@ function Body() {
                                 <div className='content1 content'>
 
                                     <div className='yearDropdown dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>{userYear? userYear: 'Year'} <div><ExpandMoreIcon /></div></div>
                                         <div className='menu pointerCursor hide'>
                                             {carYear ? carYear.map((year, index)=>(
                                                 <div className='option'
@@ -237,7 +247,7 @@ function Body() {
                                     </div>
 
                                     <div className='makeDropdown dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>Make <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>{userMake? userMake: 'Make'} <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
                                         {carMake && userYear ? carMake.map((make, index)=>(
                                                 <div className='option'
@@ -249,7 +259,7 @@ function Body() {
                                     </div>
 
                                     <div className='modelDropdown dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>Model <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>{userModel? userModel : 'Model'} <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
                                         {carModel && userMake ? carModel.map((model, index)=>(
                                                 <div className='option'
@@ -261,7 +271,7 @@ function Body() {
                                     </div>
 
                                     <div className='submodelDropdown dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>Submodel <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>{userSubmodel? userSubmodel : 'Submodel'} <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
                                         {carSubmodel && userModel ? carSubmodel.map((submodel, index)=>(
                                                 <div className='option'
@@ -274,9 +284,15 @@ function Body() {
                                     
                                     <span>
                                     <div className='tpmsDropdown short dropdown'>
-                                        <div className='title pointerCursor' onClick={toggleDisplay}>TMPS:NO <ExpandMoreIcon /></div>
+                                        <div className='title pointerCursor' onClick={toggleDisplay}>{userTpms? `TPMS: ${userTpms}`: "TPMS: No"} <div><ExpandMoreIcon /></div></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option0'>{userYear>1994? 'yes' : 'no'}</div>
+                                            {userSubmodel && userYear ? tpmsOptions.map((option, index)=>(
+                                            <div 
+                                                className='option' 
+                                                id={`option${index}`}
+                                                onClick={getTpms.bind(this)}
+                                                >{option}</div>
+                                            )) : <div className='option' id='null'>Choose a Submodel</div>}
                                         </div>
                                     </div>
                                     <div className='master'>
@@ -287,7 +303,7 @@ function Body() {
                                     </div>
                                     </span>
 
-                                    <span><input placeholder='zipcode' />
+                                    <span><input type='text' pattern="[0-9]{5}"  placeholder='zipcode' value={userZip} onChange={e=>userZipSet(e.target.value)} />
                                     <div className='master'>
                                         <p>Why?</p><div className='hidden'>
                                             WHY DO WE ASK ABOUT YOUR ZIPCODE? ZIP code is needed for local pricing.

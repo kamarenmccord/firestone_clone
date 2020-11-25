@@ -10,6 +10,11 @@
     height: 455px;
 }
 
+.ovmain__warning{
+    font-size: 16px !important;
+    color: yellow;
+}
+
 a.button p{
     display:none;
 }
@@ -166,6 +171,16 @@ span.ovmain__lowertext{
         align-items: flex-start;
         height: 600px;
         width: 100%;
+    }
+
+    .ovmain__warning{
+        color: darkgoldenRod;
+        margin-top: 100px;
+        margin-bottom: -100px;
+    }
+
+    .ovmain .button{
+        width:100%;
     }
 
     .ovmain__headtext{
