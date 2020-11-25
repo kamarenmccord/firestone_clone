@@ -7,16 +7,92 @@ import { getData } from './body_functions';
 
 function Body() {
 
-    const [carListOptions, carListOptionsSet] = useState(['']);
+    let [carListOptions, carListOptionsSet] = useState([]);
+    let [ carYear, carYearSet ] = useState('');
+    let [ userYear, userYearSet ] = useState('');
+    let [ carMake, carMakeSet ] = useState([]);
+    let [ userMake, userMakeSet ] = useState('');
+    let [ carModel, carModelSet ] = useState([]);
+    let [ userModel, userModelSet ] = useState('');
+    let [ carSubmodel, carSubmodelSet ] = useState([]);
+    let [ userSubmodel, userSubmodelSet ] = useState('');
+
+    const hideMenu = (menuElem) =>{
+        const parentElem = menuElem.currentTarget.parentElement.parentElement;
+        parentElem.children[0].innerText = menuElem.currentTarget.innerText;
+        parentElem.children[1].style.display = 'none';
+    }
+
+    const getYear = (yearElem) =>{
+        userYearSet(yearElem.currentTarget.innerText);
+        userMakeSet('');
+        userModelSet('');
+        userSubmodelSet('');
+        hideMenu(yearElem);
+    }
+
+    const getMake = (makeElem) =>{
+        userMakeSet(makeElem.currentTarget.innerText);
+        userModelSet('');
+        userSubmodelSet('');
+        hideMenu(makeElem);
+    }
+
+    const getModel = (modelElem) =>{
+        userModelSet(modelElem.currentTarget.innerText);
+        userSubmodelSet('');
+        hideMenu(modelElem);
+    }
+
+    const getSubmodel = (submodelElem) =>{
+        userSubmodelSet(submodelElem.currentTarget.innerText);
+        hideMenu(submodelElem);
+        activateButton();
+    }
+
+    const deactivateButton = () =>{
+        const button = document.getElementById('redboxButton');
+        button.disabled=true;
+        button.style.color = '#eb8f82';
+        button.style.borderColor='#a71907';
+    }
+
+    const activateButton = () =>{
+        const button = document.getElementById('redboxButton');
+        button.disabled = false;
+        button.style.color = 'white';
+        button.style.borderColor = 'black';
+    }
+
+    const submitButton = (button) =>{
+        console.log('userYear: ', userYear);
+    }
+
+
+    const filterOut = (type, arrayToFilter) =>{
+        let masterList = [];
+        // get a list of all types
+        for (let i in arrayToFilter['results']){
+            masterList.push(arrayToFilter['results'][i][type])
+        }
+        // filter out all duplicates
+        let setList = [...new Set(masterList)];
+        //return filtered list
+        return setList;
+    }
 
     useEffect(()=>{
         getData()
         .then((data)=>{
-            console.log(data);
-            carListOptionsSet(data['results'])
-        .catch(e=>{console.log(e)});
-        }, [carListOptions])
-    })
+            carListOptionsSet(data['results']);
+            carYearSet(filterOut('Year', data));
+            carMakeSet(filterOut('Make', data));
+            carModelSet(filterOut('Model', data));
+            carSubmodelSet(filterOut('Category', data));
+        })
+        .catch(e=>{console.log(e)})
+
+    }, [carListOptionsSet])
 
     const switchDisplay = (elem) =>{
         // adds pagination to redbox
@@ -87,16 +163,24 @@ function Body() {
                                     <div className='yearDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Year <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            {carListOptions.map((op, index)=>(
-                                                <div className='option' id='option1'>Loading Please wait</div>
-                                            ))}
+                                            {carYear ? carYear.map((year, index)=>(
+                                                <div className='option'
+                                                    key={`option${index}`} 
+                                                    onClick={getYear.bind(this)}
+                                                >{year}</div>
+                                            )): <div className='option' key='null' id='null'>Loading...</div>}
                                         </div>
                                     </div>
 
                                     <div className='makeDropdown dropdown'>
                                         <div className='title pointerCursor' onClick={toggleDisplay}>Make <ExpandMoreIcon /></div>
                                         <div className='menu pointerCursor hide'>
-                                            <div className='option' id='option1'>Choose a Year</div>
+                                        {carMake && userYear ? carMake.map((make, index)=>(
+                                                <div className='option'
+                                                    key={`option${index}`} 
+                                                    onClick={getYear.bind(this)}
+                                                >{make}</div>
+                                            )): <div className='option' key='null' id='null'>Choose a year</div>}
                                         </div>
                                     </div>
 
@@ -158,7 +242,7 @@ function Body() {
                                     </span>
                                 </div>
 
-                                <button id='redboxButton' disabled>GET TIRE PRICING</button>
+                                <button onClick={submitButton.bind(this)} id='redboxButton'>GET TIRE PRICING</button>
                             </div>
                         </div>
                     </div>
