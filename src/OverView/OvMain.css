@@ -11,8 +11,10 @@
 }
 
 .ovmain__warning{
+    background-color: rgba(0,0,0,0.4);
     font-size: 16px !important;
     color: yellow;
+    padding: 0 20px;
 }
 
 a.button p{
@@ -174,7 +176,7 @@ span.ovmain__lowertext{
     }
 
     .ovmain__warning{
-        color: darkgoldenRod;
+        color: yellow;
         margin-top: 100px;
         margin-bottom: -100px;
     }
