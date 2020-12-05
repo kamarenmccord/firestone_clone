@@ -10,7 +10,7 @@ function OvMain() {
                     <div className='ovmain__headtext'>
                         <span className='ovmain__uppertext'>MAKE YOUR CAR A</span>
                         <span className='ovmain__lowertext'>FIRESTONE</span>
-                        <span className='ovmain__warning'>Note that this is a markup WebPage and has links to the real page but you should not use your actual login information here</span>
+                        <span className='ovmain__warning'>Note that this is a markup WebPage and has links to the real page but you should not use your personal information here</span>
                     </div>
                     <a href='/firestonetires' className='ovmain__upperbutton button'>
                             <div className='ovmain__uppertext'>Go To</div>

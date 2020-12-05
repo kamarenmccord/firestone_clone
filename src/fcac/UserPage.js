@@ -1,43 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom';
 import './UserPage.css';
 import { useStateValue } from '../stateProvider';
-import { RemoveShoppingCart } from '@material-ui/icons';
+import GarageCar from './GarageCar';
+
 
 const UserPage = () => {
-    const [{vehicle}, dispatch] = useStateValue();
-    console.log('make sure to reset the button before exiting the prev screen');
+    const history = useHistory();
+    const [{vehicle}, ] = useStateValue();
 
-    const removeCar = () =>{
-        dispatch({
-            type:'REMOVE_CAR',
-            car:{
-                id: 1,
-            }
-        })
-        console.log("You have to give them indiviual ids")
+    console.log("TODO: give vehicles indiviual ids")
+
+    const returnToPrevPage = () =>{
+        history.push("/firestonecomplete");
     }
 
     return (
         <div className='userpage'>
-            <a href='/'><button className='returnButton'>Return</button></a>
+            <button className='returnButton' 
+                    onClick={returnToPrevPage}>
+                    Return
+            </button>
             <div className='foreground'>
                 <h2>Your Garage</h2>
-            {vehicle.length>0 ? vehicle.map((car, index)=>(
-            <div className='user__wrapper'>
-                <button onClick={removeCar.bind(this)} className='removeCar'>X</button>
-                <div className={`user__year li`}>
-                    {car.year}
-                </div>
-                <div className="user__make li">
-                    {car.make}
-                </div>
-                <div className="user__model li">
-                    {car.model}
-                </div>
-                <div className="user__submodel li">
-                    {car.submodel}
-                </div>
-            </div>
+            {vehicle.length>0 ? vehicle.map((car)=>(
+                <GarageCar
+                    id={car.id}
+                    year={car.year}
+                    make={car.make}
+                    model={car.model}
+                    submodel={car.submodel}
+                />
             )): <div className='user__unknown'>No cars found in garage</div>}
             </div>
         </div>

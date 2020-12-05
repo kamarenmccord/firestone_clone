@@ -233,6 +233,15 @@
     font-weight: bold;
 }
 
+#redboxButton a{
+    color:white;
+}
+
+#redboxButton p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .redbox .dropright{
     height: 450px;
     width: 350px;

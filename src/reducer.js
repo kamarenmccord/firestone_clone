@@ -2,7 +2,27 @@
 
 export const initalState = {
     user:null,
-    vehicle: [{'id': 1, 'year':'2001', 'make':'mazda', 'model':'protege', 'submodel':'sedan'}],
+    vehicle: [{
+        id:1,
+        year:'1992',
+        make: 'mccord',
+        model: 'kamaren',
+        submodel: 'test'
+    },
+    {
+        id:2,
+        year:'1',
+        make: 'noah',
+        model: 'ark',
+        submodel: 'test',
+    },
+    {
+        id:3,
+        year:'2',
+        make: 'god',
+        model: 'earth',
+        submodel: 'mars',
+    }],
 }
 
 const reducer = (state, action)=>{
@@ -19,9 +39,18 @@ const reducer = (state, action)=>{
             }
         case 'REMOVE_CAR':
             let cleanedList = [...state.vehicle];
-            cleanedList = [state.vehicle.filter((car)=>car.id !== action.id)]
-            console.log(cleanedList);
+            const index = state.vehicle.findIndex((car)=> car.id === action.id);
+            // cleanedList= [state.vehicle.filter((car)=>car.id !== action.id)];
+
+            if (index >= 0){
+                cleanedList.splice(index, 1);
+            } else {
+                console.warn(
+                    `cannot remove vehicle with id of ${action.id}`
+                )
+            }
             return {...state, vehicle: cleanedList}
+        
         default:
             return state;
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './megamenu.css';
 import TireLink from './TireLink';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -180,7 +181,7 @@ function Megamenu() {
 
                 <li className='individual__li header4'>COUPONS</li> 
                 <li className='individual__li header4'>FIND A STORE</li>
-                <li className='individual__li header4'><ShoppingCartIcon /></li>
+                <li className='individual__li header4'><Link to='/userpage' ><ShoppingCartIcon /></Link></li>
                 <li className='searchbar'>
                     <p>Find Your Local Store:</p>
                     <div>

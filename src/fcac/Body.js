@@ -10,7 +10,6 @@ import { useStateValue } from '../stateProvider';
 function Body() {
 
     const [{vehicle}, dispatch] = useStateValue();
-    console.log(vehicle)
     const updateUser = () =>{
         dispatch({
             type:'ADD_CAR',
@@ -351,7 +350,7 @@ function Body() {
                                     </span>
                                 </div>
 
-                                <button onClick={submitButton.bind(this)} id='redboxButton'><Link to='/userpage'>GET TIRE PRICING</Link></button>
+                                <button onClick={submitButton.bind(this)} id='redboxButton'>{userSubmodel ? <Link to='/userpage'>GET TIRE PRICING</Link> : <p>GET TIRE PRICING</p>}</button>
                             </div>
                         </div>
                     </div>
