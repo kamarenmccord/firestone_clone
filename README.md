@@ -9,6 +9,5 @@ The Firestone Tires and the Firestone Complete Auto Care pages from the top fire
 <p><b>Run via npm start</b><br/></p>
 
 <p><b>Current Work In Progress</b></p>
-<p>adding functionality to complete auto's dropdown menu</p>
 <p>adding firebase login capabilites</p>
 <p>adding geolocations... maybe<p>

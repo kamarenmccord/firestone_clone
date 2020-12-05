@@ -29,7 +29,7 @@ const UserPage = () => {
                     model={car.model}
                     submodel={car.submodel}
                 />
-            )): <div className='user__unknown'>No cars found in garage</div>}
+            )): <div className='user__unknown'>No cars found in garage <br />Add cars to view them here</div>}
             </div>
         </div>
     )
