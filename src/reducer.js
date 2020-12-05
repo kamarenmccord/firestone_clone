@@ -2,27 +2,7 @@
 
 export const initalState = {
     user:null,
-    vehicle: [{
-        id:1,
-        year:'1992',
-        make: 'mccord',
-        model: 'kamaren',
-        submodel: 'test'
-    },
-    {
-        id:2,
-        year:'1',
-        make: 'noah',
-        model: 'ark',
-        submodel: 'test',
-    },
-    {
-        id:3,
-        year:'2',
-        make: 'god',
-        model: 'earth',
-        submodel: 'mars',
-    }],
+    vehicle: [],
 }
 
 const reducer = (state, action)=>{

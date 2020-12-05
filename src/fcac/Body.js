@@ -14,7 +14,7 @@ function Body() {
         dispatch({
             type:'ADD_CAR',
             car:{
-                id: vehicle.length+1,
+                id: Math.floor((Math.random()*999999)+1),
                 year:userYear,
                 make:userMake,
                 model:userModel,
