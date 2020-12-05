@@ -9,13 +9,13 @@ import { useStateValue } from '../stateProvider';
 
 function Body() {
 
-    const [{vehicle}, dispatch] = useStateValue();
+    const [, dispatch] = useStateValue();
     const updateUser = () =>{
         dispatch({
             type:'ADD_CAR',
             car:{
                 id: Math.floor((Math.random()*999999)+1),
-                year:userYear,
+                year: parseInt(userYear),
                 make:userMake,
                 model:userModel,
                 submodel:userSubmodel,
@@ -46,7 +46,7 @@ function Body() {
         // return makes that existed that year
         let returnList = []
         carListOptions.forEach((carObject)=>{
-            if (carObject.Year == userYear){
+            if (carObject.Year === userYear){
                 returnList.push(carObject.Make)
         }})
 
@@ -59,7 +59,7 @@ function Body() {
     const filterModels = () =>{
         let returnList = []
         carListOptions.forEach((carObject)=>{
-            if (carObject.Year == userYear && carObject.Make == userMake){
+            if (carObject.Year === userYear && carObject.Make === userMake){
                 returnList.push(carObject.Model)
             }
         })
@@ -72,7 +72,7 @@ function Body() {
     const filterSubmodels = () =>{
         let returnList = []
         carListOptions.forEach((carObject)=>{
-            if (carObject.Year == userYear && carObject.Make == userMake && carObject.Model == userModel){
+            if (carObject.Year === userYear && carObject.Make === userMake && carObject.Model === userModel){
                 returnList.push(carObject.Category)
             }
         })
@@ -100,10 +100,10 @@ function Body() {
 
     const getYear = (yearElem) =>{
         hideMenu(yearElem);
-        userMakeSet(''); //effects the elem.title not here
+        userMakeSet(''); //clear any prev selections
         userModelSet('');
         userSubmodelSet('');
-        userYearSet(yearElem.currentTarget.innerText);
+        userYearSet(parseInt(yearElem.currentTarget.innerText));
     }
 
     useEffect(()=>{
@@ -112,6 +112,20 @@ function Body() {
             deactivateButton();
         }
     }, [userYear, userMake, userModel, userSubmodel])
+
+    useEffect(()=>{
+        // has to be ran after the page is rendered
+        getData()
+        .then((data)=>{
+            carListOptionsSet(data['results']);
+            carYearSet(filterOut('Year', data));
+            carMakeSet(filterOut('Make', data).sort());
+            carModelSet(filterOut('Model', data));
+            carSubmodelSet(filterOut('Category', data));
+        })
+        .catch(e=>{console.log(e)})
+
+    }, [])
 
     const getMake = (makeElem) =>{
         if (userYear > 1994){
@@ -173,26 +187,13 @@ function Body() {
         return setList;
     }
 
-    useEffect(()=>{
-        getData()
-        .then((data)=>{
-            carListOptionsSet(data['results']);
-            carYearSet(filterOut('Year', data));
-            carMakeSet(filterOut('Make', data).sort());
-            carModelSet(filterOut('Model', data));
-            carSubmodelSet(filterOut('Category', data));
-        })
-        .catch(e=>{console.log(e)})
-
-    }, [])
-
     const switchDisplay = (elem) =>{
         // adds pagination to redbox
         if (elem.currentTarget.tagName === 'H4'){
             let all_hFours = document.getElementsByClassName('hFour');
 
             for (let tag of all_hFours){
-                if (tag == elem.currentTarget){
+                if (tag === elem.currentTarget){
                     let children = tag.parentElement.children[1];
                     children.style.display = 'block';
                     tag.parentElement.style.backgroundColor = '#d81e05';
@@ -206,20 +207,20 @@ function Body() {
             let sliders = document.getElementsByClassName('subchoicebutton');
             for (let x of sliders){
                 let subDiv = x.parentElement.parentElement.children[1].children;
-                if (x == elem.currentTarget){
+                if (x === elem.currentTarget){
                     x.style.backgroundColor = 'white';
                     x.style.color = '#d81e05';
                     
                     for (let y of subDiv){
-                        if (x.className == 'button_left subchoicebutton' && y.className == 'content1 content'){
+                        if (x.className === 'button_left subchoicebutton' && y.className === 'content1 content'){
                             y.style.display = 'flex';
                             y.style.flexDirection= 'column';
-                        } else if (x.className == 'button_right subchoicebutton' && y.className == 'content2 content')
+                        } else if (x.className === 'button_right subchoicebutton' && y.className === 'content2 content')
                         {
                             y.style.display = 'flex';
                             y.style.flexDirection= 'column';
                         } else {
-                            if (y.className=='content1 content' || y.className=='content2 content'){
+                            if (y.className==='content1 content' || y.className==='content2 content'){
                             y.style.display = 'none';
                             }
                         }

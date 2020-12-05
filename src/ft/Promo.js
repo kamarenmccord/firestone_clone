@@ -1,13 +1,13 @@
 import React from 'react';
 import './promo.css';
 
-const Promo = ({side, background_img, header, text, subtext, link, video}) => {
+const Promo = ({title, side, background_img, header, text, subtext, link, video}) => {
     return (
         <div className={side+'promo'} style={{ backgroundImage: `url(${background_img})`}}>
             <div className={side+'promo__flexwrapper'}>
 
                 <div className='left_content'>
-                    <iframe width="393" height="221" src={video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title={title} width="393" height="221" src={video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
 
                 <div className='right_content'>

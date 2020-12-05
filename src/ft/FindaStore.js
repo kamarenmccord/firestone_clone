@@ -9,7 +9,7 @@ function FindaStore() {
                     FIND THE RIGHT TIRES AT YOUR LOCAL STORE
                 </div>
                 <div className='lowertext'>
-                    <a href=''>FIND A STORE</a> or <a href=''>MAKE AN APPOINTMENT</a>
+                    <a href='/firestonetires'>FIND A STORE</a> or <a href='/firestonetires'>MAKE AN APPOINTMENT</a>
                 </div>
             </div>
         </div>

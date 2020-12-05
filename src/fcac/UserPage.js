@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom';
 import './UserPage.css';
 import { useStateValue } from '../stateProvider';
@@ -8,8 +8,6 @@ import GarageCar from './GarageCar';
 const UserPage = () => {
     const history = useHistory();
     const [{vehicle}, ] = useStateValue();
-
-    console.log("TODO: give vehicles indiviual ids")
 
     const returnToPrevPage = () =>{
         history.push("/firestonecomplete");

@@ -1,6 +1,5 @@
 import React from 'react';
 import "./OvMain.css";
-import { Link } from 'react-router-dom';
 
 function OvMain() {
     return (

@@ -7,6 +7,7 @@ function TirePromo() {
     return (
         <div className='tirepromo'>
             <Promo
+                title='1'
                 side='right'
                 background_img='https://www.firestonetire.com/content/dam/bridgestone/consumer/fst/Brands/LE3_TireTreadBG_darker2.jpg'
 
@@ -19,6 +20,7 @@ function TirePromo() {
             />
             {spacer}
             <Promo
+                title='2'
                 side='left'
                 background_img="https://www.firestonetire.com/content/dam/bridgestone/consumer/fst/Brands/weathergrip/weathergrip_video_background.jpg"
 
@@ -29,6 +31,7 @@ function TirePromo() {
             />
             {spacer}
             <Promo
+                title='3'
                 side='right'
                 background_img='https://www.firestonetire.com/content/dam/bridgestone/consumer/fst/Brands/Destination/FST_destination_allweathertires_bg1.jpg'
 
@@ -41,6 +44,7 @@ function TirePromo() {
             />
             {spacer}
             <Promo
+                title='4'
                 side='left'
                 background_img='https://www.firestonetire.com/content/dam/bridgestone/consumer/fst/Brands/Destination/FST_destination_heavydutytires_bg1.jpg'
 

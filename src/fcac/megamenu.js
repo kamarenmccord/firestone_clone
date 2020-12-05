@@ -22,10 +22,10 @@ function Megamenu() {
                                 <div className='tires_left'>
                                     <ul>
                                         <h3>SHOP FOR TIRES</h3>
-                                        <li><a href=''>Shop Tires by Vehicle</a></li>
-                                        <li><a href=''>Shop by Tire Size</a></li>
-                                        <li><a href=''>Shop for Tires by Type</a></li>
-                                        <li className='last'><a href=''>Tire warranties</a></li>
+                                        <li><a href='/firestonecomplete'>Shop Tires by Vehicle</a></li>
+                                        <li><a href='/firestonecomplete'>Shop by Tire Size</a></li>
+                                        <li><a href='/firestonecomplete'>Shop for Tires by Type</a></li>
+                                        <li className='last'><a href='/firestonecomplete'>Tire warranties</a></li>
                                         <li className='image'>          
                                             <img
                                                 src='https://assets.firestonecompleteautocare.com/content/dam/bsro/fcac/images/logos/90DayTryBuyTryLogo_Color.png/_jcr_content/renditions/cq5dam.thumbnail.140.100.png'

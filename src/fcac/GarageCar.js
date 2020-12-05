@@ -15,7 +15,7 @@ const GarageCar = ( { id, year, make, model, submodel }) => {
 
     return (
         <div className='user__wrapper'>
-            <button onClick={removeCar} className='removeCar'>X</button>
+            <button onClick={removeCar} className='removeCar'><RemoveShoppingCart />: Remove</button>
             <div className={`user__year li`}>
                 {year}
             </div>
